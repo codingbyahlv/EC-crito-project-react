@@ -1,0 +1,18 @@
+@import "../../../assets/styles/_variables.scss";
+
+.logoSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 80px 0;
+  @media screen and (min-width: $xLargeDevice) {
+    max-width: $contentWidth;
+  }
+
+  .img {
+    height: 88px;
+    width: 224px;
+    flex-grow: 1;
+  }
+}

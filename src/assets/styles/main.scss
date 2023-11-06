@@ -1,0 +1,49 @@
+@import "variables";
+
+#root {
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  font-family: $font1;
+  font-weight: 400;
+  color: $fontColor1;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.sectionHeadingSmall {
+  color: $fontColor4;
+  font-weight: 500;
+  font-size: 18px;
+  align-self: center;
+  text-align: center;
+  @media screen and (min-width: $mediumDevice) {
+    align-self: flex-start;
+    text-align: left;
+  }
+}
+.sectionHeadingBig {
+  font-family: $font2;
+  font-size: 40px;
+  line-height: 120%;
+  margin-top: 16px;
+  align-self: center;
+  text-align: center;
+  @media screen and (min-width: $mediumDevice) {
+    font-size: 48px;
+    align-self: flex-start;
+    text-align: left;
+  }
+}

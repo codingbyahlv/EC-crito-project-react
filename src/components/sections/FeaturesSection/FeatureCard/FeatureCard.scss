@@ -1,0 +1,38 @@
+@import "../../../../assets/styles/_variables.scss";
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 24px 40px;
+  @media screen and (min-width: $smallDevice) {
+    flex: 0 1 45%;
+  }
+  @media screen and (min-width: $mediumDevice) {
+    align-items: flex-start;
+    text-align: left;
+  }
+  @media screen and (min-width: $largeDevice) {
+    padding: 24px 0px;
+  }
+
+  .featureIcon {
+    font-size: 40px;
+    margin-bottom: 14px;
+  }
+
+  .heading {
+    font-family: $font2;
+    font-size: 22px;
+  }
+
+  .txt {
+    line-height: 156%;
+    font-weight: 400;
+    @media screen and (min-width: $xLargeDevice) {
+      width: 90%;
+    }
+  }
+}

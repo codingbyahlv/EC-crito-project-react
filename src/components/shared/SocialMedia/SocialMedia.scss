@@ -1,0 +1,12 @@
+@import "../../../assets/styles/_variables.scss";
+
+.socialMediaIconsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+
+  .fa-brands {
+    cursor: pointer;
+  }
+}

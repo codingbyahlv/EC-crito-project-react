@@ -1,0 +1,30 @@
+@import "../../../assets/styles/_variables.scss";
+
+.contactWaysWrapper {
+  @media screen and (min-width: $largeDevice) {
+    display: flex;
+    gap: 16px;
+  }
+  .infoWrapper {
+    cursor: pointer;
+    @media screen and (min-width: $largeDevice) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding-right: 11px;
+      border-right: 1px solid #dadad4;
+    }
+
+    &.lastOne {
+      border-right: none;
+    }
+    .info {
+      @media screen and (min-width: $largeDevice) {
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import "../../../assets/styles/_variables.scss";
+
+.featuresSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  padding: 64px 5%;
+  border: 1.2px solid rgba(89, 89, 87, 0.301);
+  @media screen and (min-width: $mediumDevice) {
+    padding: 80px 5%;
+  }
+  @media screen and (min-width: $xLargeDevice) {
+    flex-direction: row;
+    gap: 72px;
+  }
+  @media screen and (min-width: $xxLargeDevice) {
+    padding: 80px 100px;
+    max-width: 1520px;
+    gap: 100px;
+  }
+
+  .txtWrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $largeDevice) {
+      flex: 1 0 50%;
+      text-align: left;
+    }
+    @media screen and (min-width: $xLargeDevice) {
+      flex: 1 0 35%;
+    }
+
+    .learnMoreBtn {
+      margin-top: 40px;
+      align-self: center;
+      @media screen and (min-width: $smallDevice) {
+      }
+      @media screen and (min-width: $mediumDevice) {
+        align-self: flex-start;
+      }
+      @media screen and (min-width: $largeDevice) {
+      }
+      @media screen and (min-width: $xLargeDevice) {
+        width: 100%;
+      }
+      @media screen and (min-width: $xxLargeDevice) {
+      }
+    }
+  }
+
+  .featureWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @media screen and (min-width: $smallDevice) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      padding: 24px 40px;
+      @media screen and (min-width: $smallDevice) {
+        flex: 0 1 45%;
+      }
+      @media screen and (min-width: $mediumDevice) {
+        align-items: flex-start;
+        text-align: left;
+      }
+      @media screen and (min-width: $largeDevice) {
+        padding: 24px 0px;
+      }
+
+      i {
+        font-size: 40px;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-family: $font2;
+        font-size: 22px;
+      }
+
+      p {
+        line-height: 156%;
+        font-weight: 400;
+        @media screen and (min-width: $xLargeDevice) {
+          width: 90%;
+        }
+      }
+    }
+  }
+}

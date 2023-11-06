@@ -1,0 +1,103 @@
+@import "../../../assets/styles/_variables.scss";
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $bgColor1;
+  background-image: url(../../../assets/images/bg_white_lines_left.svg);
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  @media screen and (min-width: 1200px) {
+    align-items: center;
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $mediumDevice) {
+      flex-direction: row;
+    }
+    @media screen and (min-width: $xLargeDevice) {
+      width: 100%;
+      max-width: 1390px;
+    }
+
+    .txtWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 32px;
+      padding: 60px 16px 80px 16px;
+      @media screen and (min-width: $mediumDevice) {
+        padding: 90px 16px 120px 16px;
+      }
+      @media screen and (min-width: $largeDevice) {
+        flex: 1;
+        padding: 120px 16px 160px 16px;
+      }
+
+      .heading {
+        font-family: $font2;
+        font-size: 48px;
+        line-height: 104%;
+        text-align: center;
+        @media screen and (min-width: $mediumDevice) {
+          text-align: left;
+        }
+        @media screen and (min-width: $largeDevice) {
+          font-size: 72px;
+        }
+        @media screen and (min-width: $xLargeDevice) {
+          font-size: 84px;
+        }
+        @media screen and (min-width: $xxLargeDevice) {
+          font-size: 96px;
+        }
+      }
+
+      .subTxt {
+        text-align: center;
+        font-size: 20px;
+        line-height: 160%;
+        color: $fontColor2;
+        @media screen and (min-width: $mediumDevice) {
+          text-align: left;
+        }
+      }
+
+      .btnWrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 16px;
+        @media screen and (min-width: $mediumDevice) {
+          justify-content: flex-start;
+        }
+        .link {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .imgWrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-right: 16px;
+      @media screen and (min-width: $largeDevice) {
+        width: 50%;
+      }
+      @media screen and (min-width: $xxLargeDevice) {
+        width: 46%;
+        align-items: flex-end;
+        padding-right: 0;
+      }
+      .img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

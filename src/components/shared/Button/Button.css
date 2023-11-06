@@ -1,0 +1,47 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 16px 24px;
+  border-radius: 27px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #191919;
+  transition: 0.3s;
+}
+.button:hover {
+  background-color: #191919;
+  border-color: #191919;
+  color: #ffffff;
+}
+
+.btnYellow {
+  background-color: #f9d783;
+  border-color: #f9d783;
+}
+
+.btnWhite {
+  background-color: #ffffff;
+}
+
+.btnBlack {
+  background-color: #191919;
+  border-color: #191919;
+  color: #ffffff;
+}
+.btnBlack:hover {
+  background-color: #f9d783;
+  border-color: #f9d783;
+  color: #191919;
+}
+
+.btnRound {
+  width: 53.5px;
+  height: 53.5px;
+  border-radius: 50%;
+  padding: 0;
+}

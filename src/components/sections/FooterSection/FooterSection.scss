@@ -1,0 +1,130 @@
+@import "../../../assets/styles/_variables.scss";
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $bgColor4;
+  color: $fontColor3;
+
+  .background {
+    background-image: url(../../../assets/images/bg_white_lines_right_footer.svg);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .contentWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      padding: 120px 0 100px 0;
+      @media screen and (min-width: $xLargeDevice) {
+        max-width: $contentWidth;
+      }
+      @media screen and (min-width: $xxLargeDevice) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      .logoInfoWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        color: $fontColor5;
+        padding-bottom: 40px;
+        @media screen and (min-width: $largeDevice) {
+          flex-direction: row;
+          align-items: flex-end;
+        }
+        @media screen and (min-width: $xxLargeDevice) {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0;
+        }
+
+        .txt {
+          @media screen and (min-width: $xxLargeDevice) {
+            max-width: 400px;
+            line-height: 162%;
+          }
+        }
+      }
+
+      .cardWrapper {
+        display: flex;
+        gap: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @media screen and (min-width: $xxLargeDevice) {
+          flex-wrap: nowrap;
+          flex-grow: 1;
+        }
+
+        .linkGroup {
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 40%;
+          min-width: 130px;
+          @media screen and (min-width: $smallDevice) {
+            flex: 1 1 45%;
+          }
+          @media screen and (min-width: $largeDevice) {
+            flex: 1 1 20%;
+          }
+
+          .heading {
+            color: $fontColor3;
+            margin-bottom: 18px;
+            @media screen and (min-width: $largeDevice) {
+              margin-bottom: 24px;
+            }
+          }
+
+          .link {
+            text-decoration: none;
+            color: $fontColor5;
+            font-weight: 500;
+            padding: 8px 0;
+            list-style: none;
+            @media screen and (min-width: $smallDevice) {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    width: 100%;
+    border-top: 1px solid $fontColor5;
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    background-color: $bgColor4;
+
+    .copyrightContentWrapper {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap-reverse;
+      width: 100%;
+      max-width: $contentWidth;
+      @media screen and (min-width: $smallDevice) {
+        justify-content: space-between;
+      }
+
+      .copyTxt {
+        text-align: center;
+        color: $fontColor5;
+        line-height: 162%;
+        min-width: 250px;
+      }
+    }
+  }
+}
