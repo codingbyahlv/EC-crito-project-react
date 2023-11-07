@@ -6,3 +6,4 @@ const NewsSection = () => {
 };
 
 export default NewsSection;
+//TODO: Den här filen är inte gjord

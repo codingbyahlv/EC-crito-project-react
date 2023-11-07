@@ -6,3 +6,4 @@ const WhyUsSection = () => {
 };
 
 export default WhyUsSection;
+//TODO: Den här filen är inte gjord
