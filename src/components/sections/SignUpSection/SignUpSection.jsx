@@ -17,7 +17,7 @@ const SignUpSection = () => {
           <ButtonGeneral
             value="Subscribe"
             className="btnYellow alignSelfCenter"
-            arrow={true}
+            iconName="arrow"
           />
         </form>
       </div>

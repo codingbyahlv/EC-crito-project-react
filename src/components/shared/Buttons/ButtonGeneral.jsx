@@ -1,13 +1,14 @@
-import { GoArrowUpRight } from "react-icons/go";
+import IconRenderer from "../IconRenderer/IconRenderer";
 import "@styles/main.scss";
 import "./Button.scss";
 
-const ButtonGeneral = ({ value, className, arrow }) => {
+const ButtonGeneral = ({ value, className, iconName }) => {
   const combinedClassName = `button ${className}`;
+
   return (
     <button className={combinedClassName}>
       {value}
-      {arrow && <GoArrowUpRight />}
+      <IconRenderer iconName={iconName} className="" />
     </button>
   );
 };
