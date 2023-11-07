@@ -1,11 +1,11 @@
-@import "../../../assets/styles/_variables.scss";
+@import "@styles/_variables.scss";
 
 .heroSection {
   display: flex;
   flex-direction: column;
   width: 100%;
   background-color: $bgColor1;
-  background-image: url(../../../assets/images/bg_white_lines_left.svg);
+  background-image: url(@images/bg_white_lines_left.svg);
   background-repeat: no-repeat;
   background-position-y: 100%;
   @media screen and (min-width: 1200px) {
@@ -74,9 +74,6 @@
         margin-top: 16px;
         @media screen and (min-width: $mediumDevice) {
           justify-content: flex-start;
-        }
-        .link {
-          white-space: nowrap;
         }
       }
     }

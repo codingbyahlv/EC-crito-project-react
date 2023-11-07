@@ -1,4 +1,4 @@
-@import "../../../assets/styles/_variables.scss";
+@import "@styles/_variables.scss";
 
 .featuresSection {
   display: flex;
@@ -31,23 +31,6 @@
     @media screen and (min-width: $xLargeDevice) {
       flex: 1 0 35%;
     }
-
-    .learnMoreBtn {
-      margin-top: 40px;
-      align-self: center;
-      @media screen and (min-width: $smallDevice) {
-      }
-      @media screen and (min-width: $mediumDevice) {
-        align-self: flex-start;
-      }
-      @media screen and (min-width: $largeDevice) {
-      }
-      @media screen and (min-width: $xLargeDevice) {
-        width: 100%;
-      }
-      @media screen and (min-width: $xxLargeDevice) {
-      }
-    }
   }
 
   .featureWrapper {
@@ -57,43 +40,6 @@
     @media screen and (min-width: $smallDevice) {
       flex-direction: row;
       flex-wrap: wrap;
-    }
-
-    article {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      text-align: center;
-      padding: 24px 40px;
-      @media screen and (min-width: $smallDevice) {
-        flex: 0 1 45%;
-      }
-      @media screen and (min-width: $mediumDevice) {
-        align-items: flex-start;
-        text-align: left;
-      }
-      @media screen and (min-width: $largeDevice) {
-        padding: 24px 0px;
-      }
-
-      i {
-        font-size: 40px;
-        margin-bottom: 14px;
-      }
-
-      h3 {
-        font-family: $font2;
-        font-size: 22px;
-      }
-
-      p {
-        line-height: 156%;
-        font-weight: 400;
-        @media screen and (min-width: $xLargeDevice) {
-          width: 90%;
-        }
-      }
     }
   }
 }

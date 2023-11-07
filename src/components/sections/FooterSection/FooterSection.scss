@@ -1,4 +1,4 @@
-@import "../../../assets/styles/_variables.scss";
+@import "@styles/_variables.scss";
 
 .footerSection {
   display: flex;
@@ -9,7 +9,7 @@
   color: $fontColor3;
 
   .background {
-    background-image: url(../../../assets/images/bg_white_lines_right_footer.svg);
+    background-image: url(@images/bg_white_lines_right_footer.svg);
     background-repeat: no-repeat;
     background-position-y: 100%;
     background-position-x: 100%;

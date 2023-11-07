@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import "../../../assets/styles/main.scss";
+import logo from "@images/logo_crito_white.png";
+import SocialMedia from "@shared/SocialMedia/SocialMedia";
+import "@styles/main.scss";
 import "./FooterSection.scss";
-import logo from "../../../assets/images/logo_crito_white.png";
-import SocialMedia from "../../shared/SocialMedia/SocialMedia";
 
 const InfoGroup = ({ group }) => {
   return (
@@ -16,10 +15,6 @@ const InfoGroup = ({ group }) => {
       ))}
     </article>
   );
-};
-
-InfoGroup.propTypes = {
-  group: PropTypes.object,
 };
 
 const FooterSection = () => {

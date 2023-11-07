@@ -1,9 +1,8 @@
-import "../../../assets/styles/main.scss";
+import image from "@images/img_hero.png";
+import ButtonLink from "@shared/Buttons/ButtonLink";
+import "@styles/main.scss";
+import "@shared/Buttons/Button.scss";
 import "./HeroSection.scss";
-import "../../shared/Button/Button.scss";
-import image from "../../../assets/images/img_hero.png";
-import { GoArrowUpRight } from "react-icons/go";
-import { NavLink } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -16,12 +15,8 @@ const HeroSection = () => {
             testable prototypes.
           </p>
           <div className="btnWrapper">
-            <NavLink to="/" className="button btnYellow link">
-              Get Consulting <GoArrowUpRight />
-            </NavLink>
-            <NavLink to="/" className="button link">
-              Learn More <GoArrowUpRight />
-            </NavLink>
+            <ButtonLink value="Get Consulting" to="/" className="btnYellow" />
+            <ButtonLink value="Learn More" to="/" className="" />
           </div>
         </div>
         <div className="imgWrapper">

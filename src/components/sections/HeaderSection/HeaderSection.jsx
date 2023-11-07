@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import ContactWays from "../../shared/ContactWays/ContactWays";
-import SocialMedia from "../../shared/SocialMedia/SocialMedia";
-import "../../../assets/styles/main.scss";
+import logo from "@images/logo_crito_black.png";
+import ButtonLink from "@shared/Buttons/ButtonLink";
+import ContactWays from "@shared/ContactWays/ContactWays";
+import SocialMedia from "@shared/SocialMedia/SocialMedia";
+import "@styles/main.scss";
+import "@shared/Buttons/Button.scss";
 import "./HeaderSection.scss";
-import logo from "../../../assets/images/logo_crito_black.png";
-import { GoArrowUpRight } from "react-icons/go";
-import "../../shared/Button/Button.scss";
 
 const HeaderSection = () => {
   return (
@@ -34,9 +34,7 @@ const HeaderSection = () => {
                 Contact
               </NavLink>
             </nav>
-            <NavLink to="/" className="button btnYellow loginBtn">
-              Login <GoArrowUpRight />
-            </NavLink>
+            <ButtonLink value="Login" to="/" className="btnYellow loginBtn" />
           </div>
         </div>
       </div>

@@ -1,11 +1,10 @@
-import { NavLink } from "react-router-dom";
-import "../../../assets/styles/main.scss";
-import "../../shared/Button/Button.scss";
-import "./AboutSection.scss";
-import { GoArrowUpRight } from "react-icons/go";
+import whiteLines from "@images/bg_white_lines.png";
+import aboutImg from "@images/img_about.jpg";
+import ButtonLink from "@shared/Buttons/ButtonLink";
 import { FaPlay } from "react-icons/fa";
-import aboutImg from "../../../assets/images/img_about.jpg";
-import whiteLines from "../../../assets/images/bg_white_lines.png";
+import "@styles/main.scss";
+import "@shared/Buttons/Button.scss";
+import "./AboutSection.scss";
 
 const AboutSection = () => {
   return (
@@ -29,10 +28,7 @@ const AboutSection = () => {
             </p>
           </div>
           <div className="btnWrapper">
-            <NavLink to="/" className="button btnBlack link">
-              Learn More
-              <GoArrowUpRight />
-            </NavLink>
+            <ButtonLink value="Learn More" to="/" className="btnBlack" />
             <div className="playBtnWrapper">
               <button className="button btnWhite playBtn btnRound">
                 <FaPlay className="icon" />

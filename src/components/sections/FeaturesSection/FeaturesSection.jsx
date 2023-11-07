@@ -1,9 +1,8 @@
-import { NavLink } from "react-router-dom";
-import "../../../assets/styles/main.scss";
-import "../../shared/Button/Button.scss";
-import "./FeaturesSection.scss";
+import ButtonLink from "@shared/Buttons/ButtonLink";
 import FeatureCard from "./FeatureCard/FeatureCard";
-import { GoArrowUpRight } from "react-icons/go";
+import "@styles/main.scss";
+import "@shared/Buttons/Button.scss";
+import "./FeaturesSection.scss";
 
 const FeaturesSection = () => {
   const data = [
@@ -36,9 +35,11 @@ const FeaturesSection = () => {
         <h2 className="sectionHeadingBig">
           Our Accounting is trusted by thousand of companies
         </h2>
-        <NavLink to="/" className="button btnYellow learnMoreBtn">
-          Learn More <GoArrowUpRight />
-        </NavLink>
+        <ButtonLink
+          value="Learn More"
+          to="/"
+          className="btnYellow learnMoreBtn"
+        />
       </div>
       <div className="featureWrapper">
         {data.map((feature, index) => (

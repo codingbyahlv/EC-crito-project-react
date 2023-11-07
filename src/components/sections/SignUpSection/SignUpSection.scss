@@ -1,0 +1,47 @@
+@import "@styles/_variables.scss";
+
+.signupSection {
+  background-color: $bgColor1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-image: url(@images/bg_grey_lines.svg);
+  background-repeat: no-repeat;
+  background-position-y: 95%;
+  background-position-x: 100%;
+  @media screen and (min-width: $mediumDevice) {
+    background-position-y: 80%;
+  }
+  @media screen and (min-width: $xLargeDevice) {
+    background-position-y: 95%;
+  }
+  @media screen and (min-width: $xxLargeDevice) {
+    background-position-y: 80%;
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    @media screen and (min-width: $xLargeDevice) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      max-width: $contentWidth;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+      @media screen and (min-width: $smallDevice) {
+        flex-direction: row;
+      }
+      @media screen and (min-width: $xLargeDevice) {
+        margin: 0;
+      }
+    }
+  }
+}

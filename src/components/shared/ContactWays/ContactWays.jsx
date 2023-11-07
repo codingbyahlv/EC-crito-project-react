@@ -1,5 +1,5 @@
-import "../../../assets/styles/main.scss";
 import IconRenderer from "../IconRenderer/IconRenderer";
+import "@styles/main.scss";
 import "./ContactWays.scss";
 
 const ContactWays = () => {

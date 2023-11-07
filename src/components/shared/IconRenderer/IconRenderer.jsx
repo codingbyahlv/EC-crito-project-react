@@ -1,12 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { FiPhoneCall, FiMapPin, FiMail } from "react-icons/fi";
 import {
   FaHandshake,
   FaRegLightbulb,
   FaChartLine,
   FaCube,
 } from "react-icons/fa";
+import { FiPhoneCall, FiMapPin, FiMail } from "react-icons/fi";
 
 const IconRenderer = ({ iconName, className }) => {
   const iconMap = {
@@ -25,11 +24,6 @@ const IconRenderer = ({ iconName, className }) => {
   });
 
   return <>{iconWithClassName}</>;
-};
-
-IconRenderer.propTypes = {
-  iconName: PropTypes.string.isRequired,
-  className: PropTypes.string,
 };
 
 export default IconRenderer;

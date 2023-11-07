@@ -1,7 +1,6 @@
-import IconRenderer from "../../../shared/IconRenderer/IconRenderer";
-import "../../../../assets/styles/main.scss";
+import IconRenderer from "@shared/IconRenderer/IconRenderer";
+import "@styles/main.scss";
 import "./FeatureCard.scss";
-import PropTypes from "prop-types";
 
 const FeatureCard = ({ feature }) => {
   return (
@@ -11,10 +10,6 @@ const FeatureCard = ({ feature }) => {
       <p className="txt">{feature.txt}</p>
     </article>
   );
-};
-
-FeatureCard.propTypes = {
-  feature: PropTypes.object,
 };
 
 export default FeatureCard;

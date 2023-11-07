@@ -94,9 +94,6 @@
     justify-content: flex-start;
   }
 }
-.heroSection .contentWrapper .txtWrapper .btnWrapper .link {
-  white-space: nowrap;
-}
 .heroSection .contentWrapper .imgWrapper {
   display: flex;
   justify-content: center;

@@ -1,8 +1,14 @@
-// import React from "react";
-import HeroSection from "../../components/sections/HeroSection/HeroSection";
-import LogoSection from "../../components/sections/LogoSection/LogoSection";
-import FeaturesSection from "../../components/sections/FeaturesSection/FeaturesSection";
-import AboutSection from "../../components/sections/AboutSection/AboutSection";
+import AboutSection from "@sections/AboutSection/AboutSection";
+import FeaturesSection from "@sections/FeaturesSection/FeaturesSection";
+import HeroSection from "@sections/HeroSection/HeroSection";
+import LogoSection from "@sections/LogoSection/LogoSection";
+import NewsSection from "@sections/NewsSection/NewsSection";
+import ProjectsSection from "@sections/ProjectsSection/ProjectsSection";
+import ServicesSection from "@sections/ServicesSection/ServicesSection";
+import SignUpSection from "@sections/SignUpSection/SignUpSection";
+import TeamSection from "@sections/TeamSection/TeamSection";
+import TestimonialSection from "@sections/TestimonialSection/TestimonialSection";
+import WhyUsSection from "@sections/WhyUsSection/WhyUsSection";
 
 const Home = () => {
   return (
@@ -11,6 +17,13 @@ const Home = () => {
       <LogoSection />
       <FeaturesSection />
       <AboutSection />
+      <ServicesSection />
+      <WhyUsSection />
+      <ProjectsSection />
+      <TeamSection />
+      <TestimonialSection />
+      <NewsSection />
+      <SignUpSection />
     </main>
   );
 };

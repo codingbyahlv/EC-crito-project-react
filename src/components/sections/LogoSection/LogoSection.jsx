@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import "../../../assets/styles/main.scss";
+import "@styles/main.scss";
 import "./LogoSection.scss";
 
 const LogoLoader = ({ data }) => {
   const [logoSrc, setLogoSrc] = useState(null);
 
   useEffect(() => {
-    import(`../../../../assets/images/${data.url}`)
+    // import(/* @vite-ignore */ `@images/${data.url}`)
+    import(/* @vite-ignore */ `../../../assets/images/${data.url}`)
       .then((module) => {
         setLogoSrc(module.default);
       })
@@ -17,13 +17,6 @@ const LogoLoader = ({ data }) => {
   }, [data.url]);
 
   return logoSrc ? <img src={logoSrc} className="img" alt={data.alt} /> : null;
-};
-
-LogoLoader.propTypes = {
-  data: PropTypes.shape({
-    url: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 const LogoSection = () => {

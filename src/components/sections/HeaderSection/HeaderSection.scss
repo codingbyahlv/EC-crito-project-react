@@ -1,4 +1,4 @@
-@import "../../../assets/styles/_variables.scss";
+@import "@styles/_variables.scss";
 
 .headerWrapper {
   width: 100%;
@@ -92,9 +92,9 @@
             }
           }
         }
-        .loginBtn {
-          padding: 10px 24px;
-        }
+        // .loginBtn {
+        //   padding: 10px 24px;
+        // }
       }
     }
   }
