@@ -28,7 +28,12 @@ const AboutSection = () => {
             </p>
           </div>
           <div className="btnWrapper">
-            <ButtonLink value="Learn More" to="/" className="btnBlack" />
+            <ButtonLink
+              value="Learn More"
+              to="/"
+              iconName="arrow"
+              className="btnBlack"
+            />
             <div className="playBtnWrapper">
               <button className="button btnWhite playBtn btnRound">
                 <FaPlay className="icon" />

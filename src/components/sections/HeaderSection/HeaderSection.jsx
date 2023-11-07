@@ -34,7 +34,12 @@ const HeaderSection = () => {
                 Contact
               </NavLink>
             </nav>
-            <ButtonLink value="Login" to="/" className="btnYellow loginBtn" />
+            <ButtonLink
+              value="Login"
+              to="/"
+              iconName="arrow"
+              className="btnYellow loginBtn"
+            />
           </div>
         </div>
       </div>

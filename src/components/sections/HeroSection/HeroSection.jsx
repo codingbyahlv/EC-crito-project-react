@@ -15,8 +15,18 @@ const HeroSection = () => {
             testable prototypes.
           </p>
           <div className="btnWrapper">
-            <ButtonLink value="Get Consulting" to="/" className="btnYellow" />
-            <ButtonLink value="Learn More" to="/" className="" />
+            <ButtonLink
+              value="Get Consulting"
+              to="/"
+              iconName="arrow"
+              className="btnYellow"
+            />
+            <ButtonLink
+              value="Learn More"
+              to="/"
+              iconName="arrow"
+              className=""
+            />
           </div>
         </div>
         <div className="imgWrapper">

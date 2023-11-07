@@ -38,6 +38,7 @@ const FeaturesSection = () => {
         <ButtonLink
           value="Learn More"
           to="/"
+          iconName="arrow"
           className="btnYellow learnMoreBtn"
         />
       </div>
