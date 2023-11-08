@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+@media screen and (min-width: 992px) {
+  .contactWaysWrapper {
+    display: flex;
+    gap: 16px;
+  }
+}
+.contactWaysWrapper .infoWrapper {
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) {
+  .contactWaysWrapper .infoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding-right: 11px;
+    border-right: 1px solid #dadad4;
+  }
+}
+.contactWaysWrapper .infoWrapper.lastOne {
+  border-right: none;
+}
+@media screen and (min-width: 992px) {
+  .contactWaysWrapper .infoWrapper .info {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.logoSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 80px 0;
+}
+@media screen and (min-width: 1200px) {
+  .logoSection {
+    max-width: 1320px;
+  }
+}
+.logoSection .img {
+  height: 88px;
+  width: 224px;
+  flex-grow: 1;
+}

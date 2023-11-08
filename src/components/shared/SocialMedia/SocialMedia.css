@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.socialMediaIconsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+}
+.socialMediaIconsWrapper .fa-brands {
+  cursor: pointer;
+}

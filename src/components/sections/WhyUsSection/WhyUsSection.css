@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.whyUsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 100px 0;
+}
+@media screen and (min-width: 1200px) {
+  .whyUsSection {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+.whyUsSection .leftWrapper {
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  .whyUsSection .leftWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.whyUsSection .leftWrapper .leftContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .whyUsSection .leftWrapper .leftContent {
+    flex: 0 1 645px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .whyUsSection .leftWrapper .leftContent {
+    flex-direction: column;
+    padding-left: 48px;
+    padding-right: 20%;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .whyUsSection .leftWrapper .leftContent {
+    padding-left: 0;
+  }
+}
+.whyUsSection .leftWrapper .leftContent .articleWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .whyUsSection .leftWrapper .leftContent .articleWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .whyUsSection .leftWrapper .leftContent .articleWrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 32px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .whyUsSection .leftWrapper .leftContent .articleWrapper {
+    gap: 40px;
+  }
+}
+.whyUsSection .rightWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .whyUsSection .rightWrapper {
+    width: 50%;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-grow: 0;
+    padding-top: 21px;
+  }
+}
+.whyUsSection .rightWrapper .rightContent {
+  position: relative;
+  width: 80%;
+}
+@media screen and (min-width: 992px) {
+  .whyUsSection .rightWrapper .rightContent {
+    flex: 0 1 645px;
+    height: 100%;
+  }
+}
+.whyUsSection .rightWrapper .rightContent .img {
+  width: 100%;
+  z-index: 1;
+}
+.whyUsSection .rightWrapper .background {
+  background-color: #f0efe9;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 28%;
+  height: 85%;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .whyUsSection .rightWrapper .background {
+    left: -22%;
+    top: 28%;
+    height: 85%;
+    width: 122%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .whyUsSection .rightWrapper .background {
+    left: -100px;
+    width: calc(100% + 100px);
+  }
+}

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .testimonialCard {
+    flex: 1 1 47%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .testimonialCard {
+    flex: 0 1 30%;
+  }
+}
+.testimonialCard .starWrapper {
+  color: #f94d1c;
+}
+.testimonialCard .reviewTxt {
+  font-size: 18px;
+  line-height: 188%;
+}
+.testimonialCard .infoWrapper {
+  display: flex;
+  gap: 16px;
+}
+.testimonialCard .infoWrapper .img {
+  width: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+.testimonialCard .infoWrapper .txtWrapper .heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.testimonialCard .infoWrapper .txtWrapper .txt {
+  color: #f94d1c;
+  line-height: 175%;
+}

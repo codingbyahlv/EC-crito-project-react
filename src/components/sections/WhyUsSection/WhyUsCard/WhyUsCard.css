@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.whyUsCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  .whyUsCard {
+    flex: 1 0 45%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .whyUsCard {
+    flex: 0 0 auto;
+  }
+}
+.whyUsCard .whyUsIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #f0efe9;
+  padding: 16px;
+  border-radius: 50%;
+}
+.whyUsCard .txtWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.whyUsCard .txtWrapper .heading {
+  font-family: "DM Sans", sans-serif;
+  line-height: 150%;
+  font-weight: 700;
+}
+.whyUsCard .txtWrapper .txt {
+  color: #595957;
+}
