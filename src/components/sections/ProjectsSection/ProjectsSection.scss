@@ -1,0 +1,36 @@
+@import "@styles/_variables";
+
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 40px 0 100px 0;
+    @media screen and (min-width: $xLargeDevice) {
+      max-width: $contentWidth;
+    }
+
+    .sectionHeadingSmall,
+    .sectionHeadingBig {
+      width: 100%;
+      text-align: center;
+    }
+
+    .projectsWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin: 48px 0;
+      @media screen and (min-width: $mediumDevice) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

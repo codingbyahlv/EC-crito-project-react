@@ -38,3 +38,4 @@ const LogoSection = () => {
 };
 
 export default LogoSection;
+//TODO: Snygga till modul
