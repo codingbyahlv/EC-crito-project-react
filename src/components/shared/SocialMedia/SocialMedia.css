@@ -1,9 +1,0 @@
-.socialMediaIconsWrapper {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 24px;
-}
-.socialMediaIconsWrapper .fa-brands {
-  cursor: pointer;
-}
