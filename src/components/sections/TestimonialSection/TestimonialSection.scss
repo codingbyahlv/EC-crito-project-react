@@ -1,0 +1,62 @@
+//TODO: css-fil saknas
+@import "@styles/_variables";
+
+.testimonialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $bgColor3;
+  padding: 0 0 100px 0;
+
+  .background {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $bgColor1;
+    padding: 100px 0;
+    @media screen and (min-width: $xxLargeDevice) {
+      max-width: 1520px;
+    }
+
+    .contentWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      @media screen and (min-width: $xLargeDevice) {
+        max-width: $contentWidth;
+      }
+      .sectionHeadingSmall,
+      .sectionHeadingBig {
+        width: 100%;
+        text-align: center;
+      }
+      .cardWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        margin-top: 80px;
+        @media screen and (min-width: $mediumDevice) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 40px;
+        }
+
+        .btnWrapper {
+          display: flex;
+          justify-content: center;
+          @media screen and (min-width: $mediumDevice) {
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex: 1 1 47%;
+          }
+          @media screen and (min-width: $largeDevice) {
+            justify-content: center;
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+  }
+}

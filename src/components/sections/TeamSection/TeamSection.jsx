@@ -5,9 +5,9 @@ import teamMember1 from "@images/img_team1.jpg";
 import teamMember2 from "@images/img_team2.jpg";
 import teamMember3 from "@images/img_team3.jpg";
 import teamMember4 from "@images/img_team4.jpg";
+import { FaCircle } from "react-icons/fa";
 import "@styles/main.scss";
 import "./TeamSection.scss";
-import { FaCircle } from "react-icons/fa";
 
 const TeamSection = () => {
   const data = [

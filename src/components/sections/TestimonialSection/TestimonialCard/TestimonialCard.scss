@@ -1,0 +1,49 @@
+//TODO: Varför ej css-fil?
+
+@import "@styles/_variables";
+
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media screen and (min-width: $mediumDevice) {
+    flex: 1 1 47%;
+  }
+  @media screen and (min-width: $largeDevice) {
+    flex: 0 1 30%;
+  }
+
+  .starWrapper {
+    color: $fontColor4;
+  }
+
+  .reviewTxt {
+    font-size: 18px;
+    line-height: 188%;
+  }
+
+  .infoWrapper {
+    display: flex;
+    gap: 16px;
+
+    .img {
+      width: 70px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .txtWrapper {
+      .heading {
+        font-family: $font2;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 150%;
+      }
+
+      .txt {
+        color: $fontColor4;
+        line-height: 175%;
+      }
+    }
+  }
+}
