@@ -57,6 +57,16 @@
     width: 100%;
   }
 }
+.showMoreBtn {
+  font-weight: 500;
+  font-family: $font1;
+  align-self: center;
+  padding: 8px 12px;
+  margin-top: 48px;
+  @media screen and (min-width: $smallDevice) {
+    display: none;
+  }
+}
 .btnRound {
   width: 53.5px;
   height: 53.5px;

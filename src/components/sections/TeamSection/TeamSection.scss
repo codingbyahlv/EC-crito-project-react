@@ -1,0 +1,73 @@
+@import "@styles/_variables";
+
+.teamSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $bgColor3;
+  padding: 100px 0 80px 0;
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    @media screen and (min-width: $xLargeDevice) {
+      max-width: $contentWidth;
+    }
+
+    .topWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @media screen and (min-width: $mediumDevice) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .btn {
+        align-self: center;
+        white-space: nowrap;
+        margin-top: 24px;
+        @media screen and (min-width: $mediumDevice) {
+          align-self: flex-end;
+        }
+      }
+    }
+
+    .cardWrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-top: 40px;
+      @media screen and (min-width: $smallDevice) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (min-width: $mediumDevice) {
+        margin-top: 100px;
+      }
+      @media screen and (min-width: $largeDevice) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+    }
+    .dotWrapper {
+      display: none;
+      @media screen and (min-width: $smallDevice) {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 48px;
+      }
+
+      .fa-circle {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.342);
+      }
+      .active {
+        color: #191919;
+      }
+    }
+  }
+}

@@ -29,13 +29,16 @@ const IconRenderer = ({ iconName, className }) => {
     design: <PiPenNib />,
     ai: <FaHeadSideVirus />,
   };
-  const selectedIcon = iconMap[iconName];
+  const selectedIcon = iconMap[iconName] || null;
 
-  const iconWithClassName = React.cloneElement(selectedIcon, {
-    className: className,
-  });
-
-  return <>{iconWithClassName}</>;
+  if (selectedIcon !== null) {
+    const iconWithClassName = React.cloneElement(selectedIcon, {
+      className: className,
+    });
+    return <>{iconWithClassName}</>;
+  } else {
+    return <></>;
+  }
 };
 
 export default IconRenderer;
