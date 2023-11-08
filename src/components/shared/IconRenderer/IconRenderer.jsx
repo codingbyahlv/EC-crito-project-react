@@ -4,10 +4,14 @@ import {
   FaRegLightbulb,
   FaChartLine,
   FaCube,
+  FaRegThumbsUp,
+  FaHeadSideVirus,
 } from "react-icons/fa";
 
 import { FiPhoneCall, FiMapPin, FiMail } from "react-icons/fi";
 import { GoArrowUpRight, GoArrowRight } from "react-icons/go";
+import { BsBullseye } from "react-icons/bs";
+import { PiPenNib } from "react-icons/pi";
 
 const IconRenderer = ({ iconName, className }) => {
   const iconMap = {
@@ -20,6 +24,10 @@ const IconRenderer = ({ iconName, className }) => {
     cube: <FaCube />,
     arrow: <GoArrowUpRight />,
     arrowRight: <GoArrowRight />,
+    thumb: <FaRegThumbsUp />,
+    stategi: <BsBullseye />,
+    design: <PiPenNib />,
+    ai: <FaHeadSideVirus />,
   };
   const selectedIcon = iconMap[iconName];
 

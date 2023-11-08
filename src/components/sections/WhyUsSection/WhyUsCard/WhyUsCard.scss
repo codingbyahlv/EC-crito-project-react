@@ -1,0 +1,38 @@
+@import "@styles/_variables";
+
+.whyUsCard {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  @media screen and (min-width: $mediumDevice) {
+    flex: 1 0 45%;
+  }
+  @media screen and (min-width: $xLargeDevice) {
+    flex: 0 0 auto;
+  }
+
+  .whyUsIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $bgColor1;
+    padding: 16px;
+
+    border-radius: 50%;
+  }
+
+  .txtWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .heading {
+      font-family: $font2;
+      line-height: 150%;
+      font-weight: 700;
+    }
+    .txt {
+      color: $fontColor2;
+    }
+  }
+}
