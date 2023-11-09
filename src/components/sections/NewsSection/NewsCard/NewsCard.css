@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.newsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .newsCard {
+    flex: 0 1 47%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .newsCard {
+    flex: 0 1 30%;
+  }
+}
+.newsCard .imgWrapper {
+  position: relative;
+}
+.newsCard .imgWrapper .dateWrapper {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #edcf87;
+}
+.newsCard .imgWrapper .dateWrapper .date {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 100%;
+  font-family: "DM Sans", sans-serif;
+}
+.newsCard .imgWrapper .dateWrapper .month {
+  color: #595957;
+  line-height: 130%;
+}
+.newsCard .imgWrapper .img {
+  width: 100%;
+  max-height: 199px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.newsCard .category {
+  color: #595957;
+}
+.newsCard h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.newsCard .txt {
+  color: #595957;
+  line-height: 175%;
+}

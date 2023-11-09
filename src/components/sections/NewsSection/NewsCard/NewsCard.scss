@@ -1,0 +1,55 @@
+@import "../../../../assets/styles/variables";
+
+.newsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media screen and (min-width: $mediumDevice) {
+    flex: 0 1 47%;
+  }
+  @media screen and (min-width: $largeDevice) {
+    flex: 0 1 30%;
+  }
+  .imgWrapper {
+    position: relative;
+    .dateWrapper {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $bgColor3;
+      .date {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 100%;
+        font-family: $font2;
+      }
+      .month {
+        color: $fontColor2;
+        line-height: 130%;
+      }
+    }
+    .img {
+      width: 100%;
+      max-height: 199px;
+      object-fit: fill;
+    }
+  }
+  .category {
+    color: $fontColor2;
+  }
+  h3 {
+    font-family: $font2;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .txt {
+    color: $fontColor2;
+    line-height: 175%;
+  }
+}

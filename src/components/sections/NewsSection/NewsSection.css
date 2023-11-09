@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.newsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 100px 0;
+}
+.newsSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  .newsSection .contentWrapper {
+    max-width: 1320px;
+  }
+}
+.newsSection .contentWrapper .topWrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .newsSection .contentWrapper .topWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+.newsSection .contentWrapper .topWrapper a {
+  white-space: nowrap;
+  align-self: center;
+  margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .newsSection .contentWrapper .topWrapper a {
+    align-self: flex-end;
+  }
+}
+.newsSection .contentWrapper .cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  .newsSection .contentWrapper .cardWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+.newsSection .contentWrapper .dotWrapper {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  .newsSection .contentWrapper .dotWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 48px;
+  }
+}
+.newsSection .contentWrapper .dotWrapper .fa-circle {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.342);
+}
+.newsSection .contentWrapper .dotWrapper .active {
+  color: #191919;
+}
