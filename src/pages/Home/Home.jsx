@@ -22,7 +22,7 @@ const Home = () => {
       <ProjectsSection />
       <TeamSection />
       <TestimonialSection />
-      <NewsSection displayedNb={3} />
+      <NewsSection displayedNb={3} heading="Get Every Single Articles & News" />
       <SignUpSection />
     </main>
   );

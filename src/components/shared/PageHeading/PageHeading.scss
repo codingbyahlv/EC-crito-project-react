@@ -1,0 +1,39 @@
+@import "../../../assets/styles/variables";
+
+.pageHeadingSection {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $bgColor1;
+  background-image: url(../../../assets/images/bg_white_lines_left.svg);
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: -15%;
+
+  .contentWrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    @media screen and (min-width: $xLargeDevice) {
+      max-width: $contentWidth;
+    }
+
+    a {
+      color: $fontColor1;
+      font-weight: 300;
+      line-height: 156%;
+      text-decoration: none;
+
+      &:last-child {
+        font-weight: 500;
+      }
+    }
+
+    .sectionHeadingBig {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
