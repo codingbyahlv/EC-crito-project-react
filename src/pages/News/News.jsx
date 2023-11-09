@@ -1,13 +1,14 @@
-import PageHeading from "@shared/PageHeading/PageHeading";
 import NewsSection from "@sections/NewsSection/NewsSection";
 import SignUpSection from "@sections/SignUpSection/SignUpSection";
+import PageHeading from "@shared/PageHeading/PageHeading";
+
 const News = () => {
   return (
-    <div>
-      <PageHeading heading="News & Articles" />
+    <main>
+      <PageHeading heading="News & Articles" to="news" active="News" />
       <NewsSection heading="Our News & Articles" />
       <SignUpSection />
-    </div>
+    </main>
   );
 };
 

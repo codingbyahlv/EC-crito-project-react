@@ -18,7 +18,7 @@ const HeaderSection = () => {
         </NavLink>
         <div className="txtWrapper">
           <div className="topWrapper">
-            <ContactWays />
+            <ContactWays page="header" />
             <SocialMedia />
           </div>
           <div className="bottomWrapper">
