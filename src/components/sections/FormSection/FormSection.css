@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  background-color: #f0efe9;
+  padding: 100px 16px;
+}
+@media screen and (min-width: 1200px) {
+  .formSection {
+    padding: 100px 150px;
+    max-width: 1320px;
+  }
+}
+.formSection .heading {
+  font-size: 45px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  line-height: 122%;
+  align-self: center;
+  text-align: center;
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 768px) {
+  .formSection .heading {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .formSection .heading {
+    width: 45%;
+  }
+}

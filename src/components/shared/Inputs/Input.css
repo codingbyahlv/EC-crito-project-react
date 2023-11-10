@@ -22,3 +22,25 @@
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
+
+.formInput {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 27px;
+  flex-grow: 1;
+}
+.formInput::-moz-placeholder {
+  color: #b6b7bc;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+.formInput::placeholder {
+  color: #b6b7bc;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.textArea {
+  height: 160px;
+  margin-bottom: 16px;
+}

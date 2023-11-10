@@ -15,3 +15,21 @@
     font-size: 16px;
   }
 }
+
+.formInput {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 27px;
+  flex-grow: 1;
+
+  &::placeholder {
+    color: $fontColor5;
+    font-family: $font1;
+    font-size: 16px;
+  }
+}
+
+.textArea {
+  height: 160px;
+  margin-bottom: 16px;
+}

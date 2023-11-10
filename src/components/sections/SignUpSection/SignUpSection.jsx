@@ -10,6 +10,7 @@ const SignUpSection = () => {
         <h2 className="sectionHeadingBig">Get News Updates By Signup</h2>
         <form>
           <InputField
+            className="input"
             placeholder="username@domain.com"
             id="signup-email"
             name="signup-email"
