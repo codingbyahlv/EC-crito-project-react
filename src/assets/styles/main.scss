@@ -47,3 +47,14 @@ main {
     text-align: left;
   }
 }
+
+@media screen and (min-width: $smallDevice) {
+} //576
+@media screen and (min-width: $mediumDevice) {
+} //768
+@media screen and (min-width: $largeDevice) {
+} //992
+@media screen and (min-width: $xLargeDevice) {
+} //1200
+@media screen and (min-width: $xxLargeDevice) {
+} //1400

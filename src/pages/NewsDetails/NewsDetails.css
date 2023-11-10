@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.pageWrapper .contentWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0;
+}
+@media screen and (min-width: 1200px) {
+  .pageWrapper .contentWrapper {
+    max-width: 1320px;
+  }
+}
+.pageWrapper .contentWrapper .topWrapper {
+  margin-bottom: 64px;
+}
+@media screen and (min-width: 768px) {
+  .pageWrapper .contentWrapper .topWrapper {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .pageWrapper .contentWrapper .topWrapper {
+    width: 60%;
+  }
+}
+.pageWrapper .contentWrapper .topWrapper .heading {
+  margin-bottom: 24px;
+}
+.pageWrapper .contentWrapper .topWrapper .detailsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.pageWrapper .contentWrapper .topWrapper .detailsWrapper .dot {
+  color: #f9d783;
+  font-size: 10px;
+}
+.pageWrapper .contentWrapper .bottomWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .pageWrapper .contentWrapper .bottomWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pageWrapper .contentWrapper .bottomWrapper .leftWrapper {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .pageWrapper .contentWrapper .bottomWrapper .leftWrapper {
+    width: 60%;
+  }
+}
+.pageWrapper .contentWrapper .bottomWrapper .leftWrapper .img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.pageWrapper .contentWrapper .bottomWrapper .leftWrapper .txt {
+  color: #595957;
+}
+.pageWrapper .contentWrapper .bottomWrapper .rightWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .pageWrapper .contentWrapper .bottomWrapper .rightWrapper {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .pageWrapper .contentWrapper .bottomWrapper .rightWrapper {
+    width: 30%;
+  }
+}
+.pageWrapper .contentWrapper .bottomWrapper .rightWrapper .recentWrapper {
+  padding: 24px;
+  border: 1px solid #b6b7bc;
+}
+.pageWrapper .contentWrapper .bottomWrapper .rightWrapper .recentWrapper .recCard .date {
+  color: #b6b7bc;
+  font-weight: 300;
+  font-size: 14px;
+}
+.pageWrapper .contentWrapper .bottomWrapper .rightWrapper .categoriesWrapper {
+  padding: 24px;
+  border: 1px solid #b6b7bc;
+}
+.pageWrapper .contentWrapper .bottomWrapper .rightWrapper .categoriesWrapper .span {
+  font-weight: 400;
+  font-size: 14px;
+}

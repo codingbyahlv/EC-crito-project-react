@@ -44,3 +44,11 @@
   height: 160px;
   margin-bottom: 16px;
 }
+
+.searchInput {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 27px;
+  flex-grow: 1;
+  background-color: rgba(211, 211, 211, 0.534);
+}

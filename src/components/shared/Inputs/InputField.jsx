@@ -1,5 +1,7 @@
+//TODO: Lägg in förstoringsglaset vid klassnamn serachinput
 import "@styles/main.scss";
 import "./Input.scss";
+import { BiSearch } from "react-icons/bi";
 
 const InputField = ({ placeholder, id, name, value, onChange, className }) => {
   return (
@@ -15,3 +17,5 @@ const InputField = ({ placeholder, id, name, value, onChange, className }) => {
 };
 
 export default InputField;
+
+<BiSearch />;
