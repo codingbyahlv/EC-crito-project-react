@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
 @media screen and (min-width: 992px) {
-  .contactWaysWrapper {
+  .contactWaysHeader {
     display: flex;
     gap: 16px;
   }
 }
-.contactWaysWrapper .infoWrapper {
+.contactWaysHeader .infoWrapper {
   cursor: pointer;
 }
 @media screen and (min-width: 992px) {
-  .contactWaysWrapper .infoWrapper {
+  .contactWaysHeader .infoWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,12 +20,84 @@
     border-right: 1px solid #dadad4;
   }
 }
-.contactWaysWrapper .infoWrapper.lastOne {
+.contactWaysHeader .infoWrapper.lastOne {
   border-right: none;
 }
 @media screen and (min-width: 992px) {
-  .contactWaysWrapper .infoWrapper .info {
+  .contactWaysHeader .infoWrapper .info {
     font-size: 15px;
     font-weight: 400;
   }
+}
+
+.contactWaysPage {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 100px 0;
+}
+@media screen and (min-width: 768px) {
+  .contactWaysPage {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contactWaysPage {
+    max-width: 1320px;
+  }
+}
+.contactWaysPage .infoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 50px 20px;
+  border: 1px solid #b6b7bc;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .contactWaysPage .infoWrapper {
+    flex: 0 1 calc(33.33% - 10px);
+    margin: 5px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .contactWaysPage .infoWrapper {
+    padding: 50px 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contactWaysPage .infoWrapper {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1320px;
+  }
+}
+.contactWaysPage .infoWrapper .iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: #0e1021;
+}
+.contactWaysPage .infoWrapper .iconWrapper .pageIcon {
+  color: #ffffff;
+  font-size: 20px;
+}
+.contactWaysPage .infoWrapper .heading {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+  margin-bottom: 16px;
+}
+.contactWaysPage .infoWrapper .info {
+  font-size: 18px;
+  line-height: 155%;
+  cursor: pointer;
 }

@@ -1,4 +1,3 @@
-//TODO:Fortsätt med stylingen av DisplayContactPage
 import IconRenderer from "../IconRenderer/IconRenderer";
 import "@styles/main.scss";
 import "./ContactWays.scss";
@@ -18,16 +17,19 @@ const ContactWays = ({ page }) => {
   const contactData = [
     {
       icon: "phone",
+      heading: "Visit us",
       infoRow1: "+46 (8) 121 470 50",
       infoRow2: "+46 (8) 121 470 51",
     },
     {
       icon: "envelope",
+      heading: "Call us",
       infoRow1: "info@crito.com",
       infoRow2: "support@crito.com",
     },
     {
       icon: "location",
+      heading: "Email us",
       infoRow1: "Sveavägen 31",
       infoRow2: "111 34 STOCKHOLM",
     },
@@ -35,36 +37,41 @@ const ContactWays = ({ page }) => {
 
   const DisplayInHeader = () => {
     return (
-      <>
+      <div className="contactWaysHeader">
         {headerData.map((contactWay, index) => (
           <article className="infoWrapper" key={index}>
             <IconRenderer className="headerIcon" iconName={contactWay.icon} />
             <p className="info">{contactWay.infoRow}</p>
           </article>
         ))}
-      </>
+      </div>
     );
   };
 
   const DisplayInContactPage = () => {
     return (
-      <>
+      <div className="contactWaysPage">
         {contactData.map((contactWay, index) => (
           <article className="infoWrapper" key={index}>
-            <IconRenderer className="headerIcon" iconName={contactWay.icon} />
-            <p className="info">{contactWay.infoRow1}</p>
-            <p className="info">{contactWay.infoRow2}</p>
+            <div className="iconWrapper">
+              <IconRenderer className="pageIcon" iconName={contactWay.icon} />
+            </div>
+            <div className="txtWrapper">
+              <h3 className="heading">{contactWay.heading}</h3>
+              <p className="info">{contactWay.infoRow1}</p>
+              <p className="info">{contactWay.infoRow2}</p>
+            </div>
           </article>
         ))}
-      </>
+      </div>
     );
   };
 
   return (
-    <div className="contactWaysWrapper">
+    <>
       {page === "header" && <DisplayInHeader />}
       {page === "contact" && <DisplayInContactPage />}
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 @import "../../../assets/styles/variables";
 
-.contactWaysWrapper {
+.contactWaysHeader {
   @media screen and (min-width: $largeDevice) {
     display: flex;
     gap: 16px;
@@ -25,6 +25,73 @@
         font-size: 15px;
         font-weight: 400;
       }
+    }
+  }
+}
+
+.contactWaysPage {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 100px 0;
+
+  @media screen and (min-width: $mediumDevice) {
+    flex-direction: row;
+    width: 100%;
+  }
+  @media screen and (min-width: $xLargeDevice) {
+    max-width: $contentWidth;
+  }
+
+  .infoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    padding: 50px 20px;
+    border: 1px solid $fontColor5;
+    text-align: center;
+    @media screen and (min-width: $mediumDevice) {
+      flex: 0 1 calc(33.33% - 10px);
+      margin: 5px;
+    }
+    @media screen and (min-width: $largeDevice) {
+      padding: 50px 50px;
+    }
+    @media screen and (min-width: $xLargeDevice) {
+      flex-direction: row;
+      justify-content: center;
+      max-width: $contentWidth;
+    }
+
+    .iconWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      border-radius: 50%;
+      background-color: $bgColor4;
+      .pageIcon {
+        color: $fontColor3;
+        font-size: 20px;
+      }
+    }
+
+    .heading {
+      font-family: $font2;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 150%;
+      margin-bottom: 16px;
+    }
+
+    .info {
+      font-size: 18px;
+      line-height: 155%;
+      cursor: pointer;
     }
   }
 }
