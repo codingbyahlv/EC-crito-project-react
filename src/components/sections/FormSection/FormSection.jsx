@@ -11,6 +11,9 @@ import {
 } from "@utils/Validation";
 import "@styles/main.scss";
 import "./FormSection.scss";
+import Modal from "react-modal";
+
+import { MdOutlineClose } from "react-icons/md";
 
 const FormSection = () => {
   const [errorData, setErrorData] = useState({
@@ -24,6 +27,7 @@ const FormSection = () => {
     message: "",
   });
   const [isValidated, setIsValidated] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const setErrorMessage = (error, id) => {
     const errorMessage = {
@@ -124,51 +128,72 @@ const FormSection = () => {
   const submitForm = (e) => {
     e.preventDefault();
     if (postData()) {
+      openModal();
       resetForm();
       setIsValidated(false);
     }
   };
 
+  //open the confirmation modal
+  const openModal = () => {
+    setIsOpen(true);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 4000);
+  };
+
   return (
-    <form className="formSection" noValidate onSubmit={submitForm}>
-      <h3 className="heading">Leave us a message for any information.</h3>
-      <InputField
-        className="formInput"
-        placeholder="Name*"
-        id="name"
-        name="name"
-        value={formData.name}
-        required
-        onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
-        error={errorData.name}
-      />
-      <InputField
-        className="formInput"
-        placeholder="Email*"
-        id="email"
-        name="email"
-        value={formData.email}
-        required
-        onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
-        error={errorData.email}
-      />
-      <TextArea
-        className="formInput textArea"
-        placeholder="Your message*"
-        id="message"
-        name="message"
-        value={formData.message}
-        required
-        onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
-        error={errorData.message}
-      />
-      <ButtonGeneral
-        className="btnYellow"
-        value="Send message"
-        iconName="arrow"
-        disabled={!isValidated}
-      />
-    </form>
+    <>
+      <form className="formSection" noValidate onSubmit={submitForm}>
+        <h3 className="heading">Leave us a message for any information.</h3>
+        <InputField
+          className="formInput"
+          placeholder="Name*"
+          id="name"
+          name="name"
+          value={formData.name}
+          required
+          onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
+          error={errorData.name}
+        />
+        <InputField
+          className="formInput"
+          placeholder="Email*"
+          id="email"
+          name="email"
+          value={formData.email}
+          required
+          onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
+          error={errorData.email}
+        />
+        <TextArea
+          className="formInput textArea"
+          placeholder="Your message*"
+          id="message"
+          name="message"
+          value={formData.message}
+          required
+          onChange={(e) => handleFieldChange(e.target.id, e.target.value)}
+          error={errorData.message}
+        />
+        <ButtonGeneral
+          className="btnYellow"
+          value="Send message"
+          iconName="arrow"
+          disabled={!isValidated}
+        />
+      </form>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={() => setIsOpen(false)}
+        className="modal"
+        overlayClassName="modalOverlay"
+      >
+        <MdOutlineClose onClick={() => setIsOpen(false)} className="icon" />
+        <h2 className="bigTxt">Yeay!</h2>
+        <p className="txt">Your message is on its way</p>
+      </Modal>
+    </>
   );
 };
 
