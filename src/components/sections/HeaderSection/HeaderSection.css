@@ -105,3 +105,43 @@
   width: 16px;
   align-self: center;
 }
+.headerWrapper .hamburger {
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .headerWrapper .hamburger {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #beebff;
+  height: 100vh;
+  width: 100vw;
+  transition: 0.5s;
+}
+.mobileMenu .navigationWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35%;
+}
+.mobileMenu .navigationWrapper .link {
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #191919;
+  font-size: 22px;
+  font-weight: 600;
+}
+.mobileMenu .navigationWrapper .active {
+  background-color: #9ee2ff;
+}
+.mobileMenu .navigationWrapper .mobileLoginBtn {
+  margin-top: 32px;
+  align-self: center;
+}

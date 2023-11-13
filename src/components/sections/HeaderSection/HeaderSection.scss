@@ -95,4 +95,43 @@
       }
     }
   }
+  .hamburger {
+    z-index: 2;
+    @media screen and (min-width: $mediumDevice) {
+      display: none;
+    }
+  }
+}
+
+.mobileMenu {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: $bgColor2;
+  height: 100vh;
+  width: 100vw;
+  transition: 0.5s;
+  .navigationWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35%;
+
+    .link {
+      padding: 16px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $fontColor1;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .active {
+      background-color: #9ee2ff;
+    }
+    .mobileLoginBtn {
+      margin-top: 32px;
+      align-self: center;
+    }
+  }
 }
