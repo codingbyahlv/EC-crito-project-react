@@ -21,6 +21,7 @@
   border: none;
   border-radius: 27px;
   flex-grow: 1;
+  font-family: $font1;
 
   &::placeholder {
     color: $fontColor5;
@@ -32,6 +33,16 @@
 .textArea {
   height: 160px;
   margin-bottom: 16px;
+}
+
+.error {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  .errMsg {
+    margin-left: 16px;
+    color: rgb(207, 14, 14);
+  }
 }
 
 .searchInput {

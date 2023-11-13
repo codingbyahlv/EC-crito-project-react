@@ -3,10 +3,10 @@
 .formSection {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   width: 100%;
   background-color: #f0efe9;
   padding: 100px 16px;
+  margin-top: 16px;
 }
 @media screen and (min-width: 1200px) {
   .formSection {
@@ -32,4 +32,10 @@
   .formSection .heading {
     width: 45%;
   }
+}
+.formSection .formInput {
+  margin: 8px 0 4px 0;
+}
+.formSection button:last-child {
+  margin-top: 16px;
 }

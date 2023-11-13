@@ -1,16 +1,36 @@
 import "@styles/main.scss";
 import "./Input.scss";
+import { BsFillExclamationTriangleFill } from "react-icons/bs";
 
-const TextArea = ({ placeholder, id, name, value, onChange, className }) => {
+const TextArea = ({
+  placeholder,
+  id,
+  name,
+  value,
+  onChange,
+  className,
+  error,
+}) => {
   return (
-    <textarea
-      className={className}
-      placeholder={placeholder}
-      id={id}
-      name={name}
-      value={value}
-      onChange={onChange}
-    ></textarea>
+    <>
+      <textarea
+        className={className}
+        placeholder={placeholder}
+        id={id}
+        name={name}
+        value={value}
+        onChange={onChange}
+      ></textarea>
+      <div className="error">
+        {error ? (
+          <span className="errMsg">
+            <BsFillExclamationTriangleFill /> {error}
+          </span>
+        ) : (
+          <></>
+        )}
+      </div>
+    </>
   );
 };
 

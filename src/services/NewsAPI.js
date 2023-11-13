@@ -17,7 +17,7 @@ export const getNews = async (id) => {
 
 const post = async (endpoint, data) => {
   const response = await axios.post(endpoint, data);
-  return response.data;
+  return response;
 };
 
 export const postForm = async (formData) => {

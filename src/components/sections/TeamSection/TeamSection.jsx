@@ -64,11 +64,7 @@ const TeamSection = () => {
           <FaCircle className="fa-circle" />
           <FaCircle className="fa-circle" />
         </div>
-        <ButtonGeneral
-          value="Show more"
-          className="btnBlack showMoreBtn"
-          iconName=""
-        />
+        <ButtonGeneral value="Show more" className="showMoreBtn" iconName="" />
       </div>
     </section>
   );

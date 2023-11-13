@@ -3,11 +3,11 @@
 .formSection {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  // gap: 16px;
   width: 100%;
   background-color: $bgColor1;
   padding: 100px 16px;
-
+  margin-top: 16px;
   @media screen and (min-width: $xLargeDevice) {
     padding: 100px 150px;
     max-width: $contentWidth;
@@ -27,5 +27,12 @@
     @media screen and (min-width: $largeDevice) {
       width: 45%;
     }
+  }
+  .formInput {
+    margin: 8px 0 4px 0;
+  }
+
+  & button:last-child {
+    margin-top: 16px;
   }
 }
