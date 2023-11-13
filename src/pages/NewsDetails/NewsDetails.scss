@@ -85,6 +85,7 @@
           border: 1px solid $fontColor5;
           .recCard {
             margin-bottom: 16px;
+            cursor: pointer;
             .date {
               color: $fontColor5;
               font-weight: 300;
@@ -105,5 +106,8 @@
         }
       }
     }
+  }
+  .error {
+    display: none;
   }
 }

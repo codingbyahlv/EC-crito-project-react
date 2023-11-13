@@ -105,6 +105,7 @@
 }
 .pageWrapper .contentWrapper .bottomWrapper .rightWrapper .recentWrapper .recCard {
   margin-bottom: 16px;
+  cursor: pointer;
 }
 .pageWrapper .contentWrapper .bottomWrapper .rightWrapper .recentWrapper .recCard .date {
   color: #b6b7bc;
@@ -121,4 +122,7 @@
 .pageWrapper .contentWrapper .bottomWrapper .rightWrapper .categoriesWrapper .span {
   font-weight: 400;
   font-size: 14px;
+}
+.pageWrapper .error {
+  display: none;
 }

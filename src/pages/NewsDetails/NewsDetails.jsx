@@ -1,7 +1,6 @@
-//TODO: Gör Recent Posts
-//TODO: Gör Categories
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useNewsContext } from "../../hooks/useNews";
 import InputField from "@shared/Inputs/InputField";
 import NewsSection from "@sections/NewsSection/NewsSection";
 import PageHeading from "@shared/PageHeading/PageHeading";
@@ -12,7 +11,9 @@ import "@styles/main.scss";
 import "./NewsDetails.scss";
 
 const NewsDetails = () => {
-  const [news, setNews] = useState();
+  const { news } = useNewsContext();
+  const navigate = useNavigate();
+  const [newsDetails, setNewsDetails] = useState();
   const [formattedDate, setFormattedDate] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
@@ -25,20 +26,36 @@ const NewsDetails = () => {
   const getNews = async () => {
     try {
       const respData = await NewsAPI_getNews(id);
-      setNews(respData);
-      formatDate(respData.published);
+      setNewsDetails(respData);
+      formatDate(respData.published, "details");
     } catch (error) {
       alert("Oh shit! Something wrong!");
     }
   };
 
-  const formatDate = (date) => {
+  const formatDate = (date, type) => {
     const options = { day: "numeric", month: "short", year: "numeric" };
     const formattedDate = new Date(date).toLocaleDateString("en-GB", options);
     const dateArray = formattedDate.split(" ");
 
-    setFormattedDate(dateArray);
-    setIsLoading(false);
+    if (type === "details") {
+      setFormattedDate(dateArray);
+      setIsLoading(false);
+    } else {
+      return dateArray;
+    }
+  };
+
+  const RecentPost = ({ news }) => {
+    let dateArray = formatDate(news.published);
+    return (
+      <article className="recCard" onClick={() => navigate(`/news/${news.id}`)}>
+        <h4 className="title">{news.title}</h4>
+        <p className="date">
+          {dateArray[1]} {dateArray[0]}, {dateArray[2]}
+        </p>
+      </article>
+    );
   };
 
   return (
@@ -49,15 +66,15 @@ const NewsDetails = () => {
       ) : (
         <div className="contentWrapper">
           <div className="topWrapper">
-            <h2 className="sectionHeadingBig heading">{news.title}</h2>
+            <h2 className="sectionHeadingBig heading">{newsDetails.title}</h2>
             <div className="detailsWrapper">
               <p>
                 {formattedDate[1]} {formattedDate[0]}, {formattedDate[2]}
               </p>
               <BsFillCircleFill className="dot" />
-              <p>{news.category}</p>
+              <p>{newsDetails.category}</p>
               <BsFillCircleFill className="dot" />
-              <p>{news.author}</p>
+              <p>{newsDetails.author}</p>
             </div>
           </div>
 
@@ -65,9 +82,9 @@ const NewsDetails = () => {
             {!isLoading && (
               <div className="leftWrapper">
                 <div className="imgWrapper">
-                  <img src={news.imageUrl} alt="" className="img" />
+                  <img src={newsDetails.imageUrl} alt="" className="img" />
                 </div>
-                <p className="txt">{news.content}</p>
+                <p className="txt">{newsDetails.content}</p>
               </div>
             )}
             <div className="rightWrapper">
@@ -80,14 +97,9 @@ const NewsDetails = () => {
                 <h3 className="subHeading">Recent Posts</h3>
                 <GoHorizontalRule className="ruleIcon" />
                 <div className="recCardWrapper">
-                  <article className="recCard">
-                    <h4 className="title">Titel</h4>
-                    <p className="date">datum</p>
-                  </article>
-                  <article className="recCard">
-                    <h4 className="title">Titel</h4>
-                    <p className="date">datum</p>
-                  </article>
+                  {news.map((news, id) => (
+                    <RecentPost news={news} key={id} />
+                  ))}
                 </div>
               </div>
 
@@ -96,13 +108,22 @@ const NewsDetails = () => {
                 <GoHorizontalRule className="ruleIcon" />
                 <div className="catWrapper">
                   <h4 className="category">
-                    Kategori - <span className="span"> 20 Posts</span>
+                    Technology - <span className="span"> 20 Posts</span>
                   </h4>
                   <h4 className="category">
-                    Kategori - <span className="span"> 20 Posts</span>
+                    Freelancing - <span className="span"> 7 Posts</span>
                   </h4>
                   <h4 className="category">
-                    Kategori - <span className="span"> 20 Posts</span>
+                    Writing - <span className="span"> 16 Posts</span>
+                  </h4>
+                  <h4 className="category">
+                    Marketing - <span className="span"> 11 Posts</span>
+                  </h4>
+                  <h4 className="category">
+                    Business - <span className="span"> 35 Posts</span>
+                  </h4>
+                  <h4 className="category">
+                    Education - <span className="span"> 14 Posts</span>
                   </h4>
                 </div>
               </div>
@@ -112,7 +133,7 @@ const NewsDetails = () => {
       )}
       <NewsSection
         displayedNb={3}
-        heading="Get Every Single Articles & News"
+        heading="Get Every Single Articles & s"
         background={true}
       />
     </main>
