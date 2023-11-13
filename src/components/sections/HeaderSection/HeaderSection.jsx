@@ -38,7 +38,7 @@ const HeaderSection = () => {
             </nav>
             <ButtonLink
               value="Login"
-              to="/"
+              to="/login"
               iconName="arrow"
               className="btnYellow loginBtn"
             />

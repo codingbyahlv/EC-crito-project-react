@@ -1,9 +1,11 @@
 import "@styles/main.scss";
 import "./NewsCard.scss";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const NewsCard = ({ data }) => {
   const [formattedData, setFormattedData] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     formatDate();
@@ -22,7 +24,7 @@ const NewsCard = ({ data }) => {
   };
 
   return (
-    <article className="newsCard">
+    <article className="newsCard" onClick={() => navigate(`/news/${data.id}`)}>
       <div className="imgWrapper">
         {formattedData && (
           <div className="dateWrapper">
