@@ -17,13 +17,13 @@ const HeroSection = () => {
           <div className="btnWrapper">
             <ButtonLink
               value="Get Consulting"
-              to="/"
+              to="*"
               iconName="arrow"
               className="btnYellow"
             />
             <ButtonLink
               value="Learn More"
-              to="/"
+              to="*"
               iconName="arrow"
               className=""
             />

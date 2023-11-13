@@ -30,7 +30,7 @@ const AboutSection = () => {
           <div className="btnWrapper">
             <ButtonLink
               value="Learn More"
-              to="/"
+              to="*"
               iconName="arrow"
               className="btnBlack"
             />

@@ -42,7 +42,7 @@ const ProjectsSection = () => {
         </div>
         <ButtonLink
           value="All recent projects"
-          to="/"
+          to="*"
           iconName="arrow"
           className="btnBlack"
         />

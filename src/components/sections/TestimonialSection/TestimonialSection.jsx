@@ -41,7 +41,7 @@ const TestimonialSection = () => {
             <div className="btnWrapper">
               <ButtonLink
                 value="All reviews"
-                to="/"
+                to="*"
                 iconName="arrow"
                 className="btnBlack"
               />

@@ -49,7 +49,7 @@ const TeamSection = () => {
             value="Browse Team"
             className="btn"
             iconName="arrow"
-            to="/"
+            to="*"
           />
         </div>
         <div className="cardWrapper">

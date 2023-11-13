@@ -37,7 +37,7 @@ const FeaturesSection = () => {
         </h2>
         <ButtonLink
           value="Learn More"
-          to="/"
+          to="*"
           iconName="arrow"
           className="btnYellow learnMoreBtn"
         />

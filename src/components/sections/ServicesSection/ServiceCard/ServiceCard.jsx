@@ -12,7 +12,7 @@ const ServiceCard = ({ heading }) => {
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in
         nam possimus.
       </p>
-      <ButtonLink iconName="arrowRight" to="/" className="btnBlack btnRound" />
+      <ButtonLink iconName="arrowRight" to="*" className="btnBlack btnRound" />
     </article>
   );
 };

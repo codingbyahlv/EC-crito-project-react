@@ -8,7 +8,7 @@ const ProjectCard = ({ data }) => {
     <article className="projectCard">
       <img className="img" src={data.img} alt={data.alt} />
       <h3 className="heading">{data.heading}</h3>
-      <NavLink className="link" to="/">
+      <NavLink className="link" to="*">
         <span>Read More</span>
         <GoArrowUpRight className="link" />
       </NavLink>

@@ -25,7 +25,7 @@ const ServicesSection = () => {
         </div>
         <ButtonLink
           iconName="arrow"
-          to="/"
+          to="*"
           className=""
           value="Browse Services"
         />
