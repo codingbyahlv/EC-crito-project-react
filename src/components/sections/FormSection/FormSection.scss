@@ -3,16 +3,15 @@
 .formSection {
   display: flex;
   flex-direction: column;
-  // gap: 16px;
   width: 100%;
   background-color: $bgColor1;
   padding: 100px 16px;
   margin-top: 16px;
+  margin-bottom: 100px;
   @media screen and (min-width: $xLargeDevice) {
     padding: 100px 150px;
     max-width: $contentWidth;
   }
-
   .heading {
     font-size: 45px;
     font-family: $font2;
@@ -31,7 +30,6 @@
   .formInput {
     margin: 8px 0 4px 0;
   }
-
   & button:last-child {
     margin-top: 16px;
   }
