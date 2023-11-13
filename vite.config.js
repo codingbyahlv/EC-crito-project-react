@@ -11,6 +11,8 @@ export default defineConfig({
       "@sections": "/src/components/sections",
       "@shared": "/src/components/shared",
       "@pages": "/src/pages",
+      "@services": "/src/services",
+      "@utils": "/src/utils",
     },
   },
 });

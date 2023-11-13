@@ -1,6 +1,6 @@
+import { BsFillExclamationTriangleFill } from "react-icons/bs";
 import "@styles/main.scss";
 import "./Input.scss";
-import { BsFillExclamationTriangleFill } from "react-icons/bs";
 
 const TextArea = ({
   placeholder,

@@ -1,17 +1,15 @@
-//TODO: Lägg in funtionaliteten
-
+import { useState } from "react";
+import { postForm as NewsAPI_postForm } from "@services/NewsAPI";
 import ButtonGeneral from "@shared/Buttons/ButtonGeneral";
 import InputField from "@shared/Inputs/InputField";
 import TextArea from "@shared/Inputs/TextArea";
-import "@styles/main.scss";
-import "./FormSection.scss";
-import { postForm as NewsAPI_postForm } from "../../../services/NewsAPI";
 import {
   validateEmail,
   validateName,
   validateMessage,
-} from "../../../utils/Validation";
-import { useState } from "react";
+} from "@utils/Validation";
+import "@styles/main.scss";
+import "./FormSection.scss";
 
 const FormSection = () => {
   const [errorData, setErrorData] = useState({
@@ -112,6 +110,7 @@ const FormSection = () => {
     try {
       const resp = await NewsAPI_postForm(formData);
       if (resp.status === 200) {
+        console.log("Skickad");
         return true;
       }
     } catch (error) {

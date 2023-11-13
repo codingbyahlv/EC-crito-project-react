@@ -1,8 +1,8 @@
 //TODO: Lägg in förstoringsglaset vid klassnamn serachinput
+import { BsFillExclamationTriangleFill } from "react-icons/bs";
 import "@styles/main.scss";
 import "./Input.scss";
 // import { BiSearch } from "react-icons/bi";
-import { BsFillExclamationTriangleFill } from "react-icons/bs";
 
 const InputField = ({
   placeholder,
