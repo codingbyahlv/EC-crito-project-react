@@ -6,19 +6,22 @@ import NewsDetails from "@pages/NewsDetails/NewsDetails";
 import NotFound from "@pages/NotFound/NotFound";
 import FooterSection from "@sections/FooterSection/FooterSection";
 import HeaderSection from "@sections/HeaderSection/HeaderSection";
+import { NewsContextProvider } from "./contexts/NewsContext";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <HeaderSection />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/news/:id" element={<NewsDetails />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <FooterSection />
+      <NewsContextProvider>
+        <HeaderSection />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:id" element={<NewsDetails />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <FooterSection />
+      </NewsContextProvider>
     </BrowserRouter>
   );
 };

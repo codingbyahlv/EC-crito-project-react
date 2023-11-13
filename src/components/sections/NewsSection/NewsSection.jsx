@@ -1,27 +1,13 @@
-import { useState, useEffect } from "react";
+import { useNewsContext } from "../../../hooks/useNews";
 import ButtonLink from "@shared/Buttons/ButtonLink";
 import ButtonGeneral from "@shared/Buttons/ButtonGeneral";
 import NewsCard from "./NewsCard/NewsCard";
-import { getAllNews as NewsAPI_getAllNews } from "../../../services/NewsAPI";
 import { FaCircle } from "react-icons/fa";
 import "@styles/main.scss";
 import "./NewsSection.scss";
 
 const NewsSection = ({ displayedNb, heading, background }) => {
-  const [news, setNews] = useState([]);
-
-  useEffect(() => {
-    getNews();
-  }, []);
-
-  const getNews = async () => {
-    try {
-      const respData = await NewsAPI_getAllNews();
-      setNews(respData);
-    } catch (error) {
-      alert("Oh shit! Something wrong!");
-    }
-  };
+  const { news } = useNewsContext();
 
   const RenderNews = () => {
     return (
