@@ -1,4 +1,3 @@
-//TODO: Ev snygga till gap
 @import "../../../assets/styles/variables";
 
 .newsSection {
@@ -16,7 +15,7 @@
       max-width: $contentWidth;
     }
 
-    .topWrapper {
+    .headingWrapper {
       display: flex;
       flex-direction: column;
       @media screen and (min-width: $xLargeDevice) {
@@ -24,7 +23,7 @@
         justify-content: space-between;
         align-items: flex-end;
       }
-      a {
+      .browseLink {
         white-space: nowrap;
         align-self: center;
         margin-top: 24px;
@@ -64,4 +63,9 @@
       }
     }
   }
+}
+
+.newsSectionBg {
+  background-color: $bgColor1;
+  padding: 0;
 }

@@ -6,7 +6,6 @@ const LogoLoader = ({ data }) => {
   const [logoSrc, setLogoSrc] = useState(null);
 
   useEffect(() => {
-    // import(/* @vite-ignore */ `@images/${data.url}`)
     import(/* @vite-ignore */ `../../../assets/images/${data.url}`)
       .then((module) => {
         setLogoSrc(module.default);
@@ -38,4 +37,3 @@ const LogoSection = () => {
 };
 
 export default LogoSection;
-//TODO: Snygga till modul

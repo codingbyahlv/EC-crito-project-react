@@ -82,11 +82,7 @@
   align-self: center;
   width: 90%;
   gap: 32px;
-}
-@media screen and (min-width: 576px) {
-  .pageWrapper .contentWrapper .bottomWrapper .rightWrapper {
-    margin-top: 32px;
-  }
+  margin-top: 32px;
 }
 @media screen and (min-width: 768px) {
   .pageWrapper .contentWrapper .bottomWrapper .rightWrapper {

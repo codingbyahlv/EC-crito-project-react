@@ -24,7 +24,13 @@ const NewsCard = ({ data }) => {
   };
 
   return (
-    <article className="newsCard" onClick={() => navigate(`/news/${data.id}`)}>
+    <article
+      className="newsCard"
+      onClick={() => {
+        navigate(`/news/${data.id}`);
+        console.log("klickad");
+      }}
+    >
       <div className="imgWrapper">
         {formattedData && (
           <div className="dateWrapper">

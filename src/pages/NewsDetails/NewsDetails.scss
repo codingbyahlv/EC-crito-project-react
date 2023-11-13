@@ -1,41 +1,22 @@
 @import "../../assets/styles/variables";
 
-@media screen and (min-width: $smallDevice) {
-} //576
-@media screen and (min-width: $mediumDevice) {
-} //768
-@media screen and (min-width: $largeDevice) {
-} //992
-@media screen and (min-width: $xLargeDevice) {
-} //1200
-@media screen and (min-width: $xxLargeDevice) {
-} //1400
-
 .pageWrapper {
   .contentWrapper {
     width: 90%;
     display: flex;
     flex-direction: column;
     padding: 100px 0;
-
     @media screen and (min-width: $xLargeDevice) {
       max-width: $contentWidth;
     }
-
     .topWrapper {
       margin-bottom: 64px;
-      @media screen and (min-width: $smallDevice) {
-      } //576
       @media screen and (min-width: $mediumDevice) {
         width: 70%;
-      } //768
+      }
       @media screen and (min-width: $largeDevice) {
         width: 60%;
-      } //992
-      @media screen and (min-width: $xLargeDevice) {
-      } //1200
-      @media screen and (min-width: $xxLargeDevice) {
-      } //1400
+      }
       .heading {
         margin-bottom: 24px;
       }
@@ -46,14 +27,13 @@
         gap: 16px;
         @media screen and (min-width: $mediumDevice) {
           justify-content: flex-start;
-        } //768
+        }
         .dot {
           color: $btnColor1;
           font-size: 10px;
         }
       }
     }
-
     .bottomWrapper {
       display: flex;
       flex-direction: column;
@@ -61,26 +41,14 @@
       @media screen and (min-width: $mediumDevice) {
         flex-direction: row;
         justify-content: space-between;
-      } //768
-      @media screen and (min-width: $largeDevice) {
-      } //992
-      @media screen and (min-width: $xLargeDevice) {
-      } //1200
-      @media screen and (min-width: $xxLargeDevice) {
-      } //1400
+      }
       .leftWrapper {
-        @media screen and (min-width: $smallDevice) {
-        } //576
         @media screen and (min-width: $mediumDevice) {
           width: 70%;
-        } //768
+        }
         @media screen and (min-width: $largeDevice) {
           width: 60%;
-        } //992
-        @media screen and (min-width: $xLargeDevice) {
-        } //1200
-        @media screen and (min-width: $xxLargeDevice) {
-        } //1400
+        }
         .imgWrapper {
           width: 100%;
           .img {
@@ -100,22 +68,14 @@
         align-self: center;
         width: 90%;
         gap: 32px;
-        @media screen and (min-width: $smallDevice) {
-          margin-top: 32px;
-        } //576
+        margin-top: 32px;
         @media screen and (min-width: $mediumDevice) {
           width: 25%;
           margin-top: 0;
           align-self: flex-start;
-        } //768
+        }
         @media screen and (min-width: $largeDevice) {
           width: 30%;
-        } //992
-        @media screen and (min-width: $xLargeDevice) {
-        } //1200
-        @media screen and (min-width: $xxLargeDevice) {
-        } //1400
-        .subHeading {
         }
         .ruleIcon {
           margin-bottom: 16px;
@@ -125,8 +85,6 @@
           border: 1px solid $fontColor5;
           .recCard {
             margin-bottom: 16px;
-            .title {
-            }
             .date {
               color: $fontColor5;
               font-weight: 300;
@@ -134,7 +92,6 @@
             }
           }
         }
-
         .categoriesWrapper {
           padding: 24px;
           border: 1px solid $fontColor5;

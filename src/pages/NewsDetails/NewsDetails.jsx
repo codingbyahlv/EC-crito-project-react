@@ -1,6 +1,9 @@
+//TODO: Gör Recent Posts
+//TODO: Gör Categories
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import InputField from "@shared/Inputs/InputField";
+import NewsSection from "@sections/NewsSection/NewsSection";
 import PageHeading from "@shared/PageHeading/PageHeading";
 import { getNews as NewsAPI_getNews } from "../../services/NewsAPI";
 import { BsFillCircleFill } from "react-icons/bs";
@@ -17,7 +20,7 @@ const NewsDetails = () => {
   useEffect(() => {
     getNews();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [id]);
 
   const getNews = async () => {
     try {
@@ -107,6 +110,11 @@ const NewsDetails = () => {
           </div>
         </div>
       )}
+      <NewsSection
+        displayedNb={3}
+        heading="Get Every Single Articles & News"
+        background={true}
+      />
     </main>
   );
 };

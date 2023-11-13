@@ -7,7 +7,7 @@ import { FaCircle } from "react-icons/fa";
 import "@styles/main.scss";
 import "./NewsSection.scss";
 
-const NewsSection = ({ displayedNb, heading }) => {
+const NewsSection = ({ displayedNb, heading, background }) => {
   const [news, setNews] = useState([]);
 
   useEffect(() => {
@@ -34,9 +34,11 @@ const NewsSection = ({ displayedNb, heading }) => {
   };
 
   return (
-    <section className="newsSection">
+    <section
+      className={background ? "newsSection newsSectionBg" : "newsSection"}
+    >
       <div className="contentWrapper">
-        <div className="topWrapper">
+        <div className="headingWrapper">
           <div>
             {displayedNb !== undefined && (
               <p className="sectionHeadingSmall">Article & News</p>
@@ -48,7 +50,7 @@ const NewsSection = ({ displayedNb, heading }) => {
               value="Browse Articles"
               to="/news"
               iconName="arrow"
-              className=""
+              className="browseLink"
             />
           )}
         </div>
@@ -75,5 +77,4 @@ const NewsSection = ({ displayedNb, heading }) => {
 };
 
 export default NewsSection;
-//TODO: Lägg in för möjlighet till bakgrundsändring
-//TODO: Lägg in för paginering på News-sidan och ta bort dotsen
+//TODO: Lägg in för paginering på News-sidan
