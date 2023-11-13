@@ -1,6 +1,33 @@
-div {
-  color: RED;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.notFoundWrapper {
+  min-height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0efe9;
+  color: #595957;
 }
-div a {
-  color: blue;
+.notFoundWrapper .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 0 20px 130px 20px;
+}
+@media screen and (min-width: 768px) {
+  .notFoundWrapper .contentWrapper {
+    padding: 0 20px 40px 20px;
+  }
+}
+.notFoundWrapper .icon {
+  font-size: 150px;
+}
+@media screen and (min-width: 768px) {
+  .notFoundWrapper .icon {
+    font-size: 300px;
+  }
+}
+.notFoundWrapper .txt {
+  text-align: center;
 }

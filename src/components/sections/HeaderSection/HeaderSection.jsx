@@ -1,5 +1,3 @@
-//TODO: Mobilmeny
-
 import { NavLink } from "react-router-dom";
 import logo from "@images/logo_crito_black.png";
 import ButtonLink from "@shared/Buttons/ButtonLink";

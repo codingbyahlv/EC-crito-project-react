@@ -1,3 +1,4 @@
+//TODO: Lägg in post bekräftelse
 import { useState } from "react";
 import { postForm as NewsAPI_postForm } from "@services/NewsAPI";
 import ButtonGeneral from "@shared/Buttons/ButtonGeneral";
