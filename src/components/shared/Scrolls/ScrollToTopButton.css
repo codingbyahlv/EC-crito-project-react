@@ -5,7 +5,10 @@
   bottom: 50px;
   right: 20px;
   font-size: 48px;
-  color: #f9d783;
+  color: #191919;
+  background-color: #f0efe9;
+  border-radius: 50%;
+  border: 0.5px solid #f0efe9;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
   z-index: 2;
@@ -18,5 +21,5 @@
 
 .scrollBtn:hover {
   opacity: 1;
-  color: #595957;
+  color: #edcf87;
 }

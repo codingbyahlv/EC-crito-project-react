@@ -5,7 +5,10 @@
   bottom: 50px;
   right: 20px;
   font-size: 48px;
-  color: $btnColor1;
+  color: $btnColor2;
+  background-color: $bgColor1;
+  border-radius: 50%;
+  border: 0.5px solid $bgColor1;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out;
   z-index: 2;
@@ -16,5 +19,5 @@
 
 .scrollBtn:hover {
   opacity: 1;
-  color: $fontColor2;
+  color: $bgColor3;
 }
