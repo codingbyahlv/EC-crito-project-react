@@ -23,6 +23,7 @@ const NewsDetails = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
+  //get the specific news
   const getNews = async () => {
     try {
       const respData = await NewsAPI_getNews(id);
@@ -33,6 +34,7 @@ const NewsDetails = () => {
     }
   };
 
+  //format the date to 00 Mmm 0000
   const formatDate = (date, type) => {
     const options = { day: "numeric", month: "short", year: "numeric" };
     const formattedDate = new Date(date).toLocaleDateString("en-GB", options);
@@ -46,6 +48,7 @@ const NewsDetails = () => {
     }
   };
 
+  //component for the recent posts
   const RecentPost = ({ news }) => {
     let dateArray = formatDate(news.published);
     return (

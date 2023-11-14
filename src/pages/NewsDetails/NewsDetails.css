@@ -81,7 +81,6 @@
   flex-direction: column;
   align-self: center;
   width: 90%;
-  gap: 32px;
   margin-top: 32px;
 }
 @media screen and (min-width: 768px) {
@@ -100,6 +99,7 @@
   margin-bottom: 16px;
 }
 .pageWrapper .contentWrapper .bottomWrapper .rightWrapper .recentWrapper {
+  margin-top: 32px;
   padding: 24px;
   border: 1px solid #b6b7bc;
 }
@@ -113,6 +113,7 @@
   font-size: 14px;
 }
 .pageWrapper .contentWrapper .bottomWrapper .rightWrapper .categoriesWrapper {
+  margin-top: 32px;
   padding: 24px;
   border: 1px solid #b6b7bc;
 }
