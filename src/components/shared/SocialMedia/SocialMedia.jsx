@@ -7,16 +7,16 @@ import { Link } from "react-router-dom";
 const SocialMedia = () => {
   return (
     <div className="socialMediaIconsWrapper">
-      <Link className="link">
+      <Link className="link" to="https://facebook.com" target="_blank">
         <BsFacebook />
       </Link>
-      <Link className="link">
+      <Link className="link" to="https://twitter.com" target="_blank">
         <FaXTwitter />
       </Link>
-      <Link className="link">
+      <Link className="link" to="https://instagram.com" target="_blank">
         <BsInstagram />
       </Link>
-      <Link className="link">
+      <Link className="link" to="https://linkedin.com" target="_blank">
         <BsLinkedin />
       </Link>
     </div>

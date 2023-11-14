@@ -7,11 +7,15 @@ import NotFound from "@pages/NotFound/NotFound";
 import FooterSection from "@sections/FooterSection/FooterSection";
 import HeaderSection from "@sections/HeaderSection/HeaderSection";
 import { NewsContextProvider } from "./contexts/NewsContext";
+import AutoScroll from "@shared/Scrolls/AutoScroll";
+import ScrollToTopButton from "@shared/Scrolls/ScrollToTopButton";
 
 const App = () => {
   return (
     <BrowserRouter>
       <NewsContextProvider>
+        <AutoScroll />
+        <ScrollToTopButton />
         <HeaderSection />
         <Routes>
           <Route path="/" element={<Home />} />

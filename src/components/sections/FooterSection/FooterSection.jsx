@@ -22,37 +22,37 @@ const FooterSection = () => {
     {
       heading: "Company",
       links: [
-        { url: "/", name: "About" },
-        { url: "/", name: "Features" },
-        { url: "/", name: "Works" },
-        { url: "/", name: "Career" },
+        { url: "*", name: "About" },
+        { url: "*", name: "Features" },
+        { url: "*", name: "Works" },
+        { url: "*", name: "Career" },
       ],
     },
     {
       heading: "Help",
       links: [
-        { url: "/", name: "Customer Support" },
-        { url: "/", name: "Delivery Details" },
-        { url: "/", name: "Terms & Conditions" },
-        { url: "/", name: "Privacy Policy" },
+        { url: "*", name: "Customer Support" },
+        { url: "*", name: "Delivery Details" },
+        { url: "*", name: "Terms & Conditions" },
+        { url: "*", name: "Privacy Policy" },
       ],
     },
     {
       heading: "Resourses",
       links: [
-        { url: "/", name: "Free eBooks" },
-        { url: "/", name: "Development Tutorial" },
-        { url: "/", name: "How to - Blog" },
-        { url: "/", name: "Youtube Playlist" },
+        { url: "*", name: "Free eBooks" },
+        { url: "*", name: "Development Tutorial" },
+        { url: "*", name: "How to - Blog" },
+        { url: "*", name: "Youtube Playlist" },
       ],
     },
     {
       heading: "Link",
       links: [
-        { url: "/", name: "Free eBooks" },
-        { url: "/", name: "Development Tutorial" },
-        { url: "/", name: "How to - Blog" },
-        { url: "/", name: "Youtube Playlist" },
+        { url: "*", name: "Free eBooks" },
+        { url: "*", name: "Development Tutorial" },
+        { url: "*", name: "How to - Blog" },
+        { url: "*", name: "Youtube Playlist" },
       ],
     },
   ];

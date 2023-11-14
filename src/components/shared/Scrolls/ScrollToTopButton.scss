@@ -1,0 +1,20 @@
+@import "../../../assets/styles/variables";
+
+.scrollBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  font-size: 48px;
+  color: $btnColor1;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+  @media screen and (min-width: $largeDevice) {
+    right: 50px;
+  }
+}
+
+.scrollBtn:hover {
+  opacity: 1;
+  color: $fontColor2;
+}

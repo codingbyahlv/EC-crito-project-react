@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+.scrollBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  font-size: 48px;
+  color: #f9d783;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+@media screen and (min-width: 992px) {
+  .scrollBtn {
+    right: 50px;
+  }
+}
+
+.scrollBtn:hover {
+  opacity: 1;
+  color: #595957;
+}
