@@ -69,19 +69,62 @@
   padding: 10px 24px;
 }
 
-.showMoreBtn {
-  font-weight: 500;
-  font-family: "Inter", sans-serif;
+.alignSelfCenter {
   align-self: center;
-  padding: 8px 12px;
-  margin-top: 48px;
 }
-@media screen and (min-width: 576px) {
-  .showMoreBtn {
-    display: none;
+
+.btnAbsoluteLeft {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .btnAbsoluteLeft {
+    display: inline;
+    position: absolute;
+    left: -20px;
+    top: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .btnAbsoluteLeft {
+    left: -40px;
+    top: 45%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btnAbsoluteLeft {
+    left: -55px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .btnAbsoluteLeft {
+    left: -70px;
   }
 }
 
-.alignSelfCenter {
-  align-self: center;
+.btnAbsoluteRight {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .btnAbsoluteRight {
+    display: inline;
+    position: absolute;
+    right: -20px;
+    top: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .btnAbsoluteRight {
+    right: -40px;
+    top: 45%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .btnAbsoluteRight {
+    right: -55px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .btnAbsoluteRight {
+    right: -70px;
+  }
 }

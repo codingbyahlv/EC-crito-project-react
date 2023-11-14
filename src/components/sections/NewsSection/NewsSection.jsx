@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useNewsContext } from "../../../hooks/useNews";
 import ButtonLink from "@shared/Buttons/ButtonLink";
 import ButtonGeneral from "@shared/Buttons/ButtonGeneral";
@@ -8,15 +9,80 @@ import "./NewsSection.scss";
 
 const NewsSection = ({ displayedNb, heading, background }) => {
   const { news } = useNewsContext();
+  const [showAll, setShowAll] = useState(false);
+  const [startIndex, setStartIndex] = useState();
+  const [endIndex, setEndIndex] = useState();
+  const [activePageNb, setActivePageNb] = useState(0);
+  const pages = news.length / displayedNb;
+  // const [displayIndex, setDisplayIndex] = useState();
 
+  // useEffect(() => {
+  //   setDisplayIndex(displayedNb);
+  // }, [displayedNb]);
+
+  useEffect(() => {
+    setStartIndex(0);
+    setEndIndex(displayedNb);
+    setActivePageNb(1);
+
+    if (displayedNb === undefined) setShowAll(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [displayedNb]);
+
+  //handle the clicks on the prev button
+  const handleLeftClick = () => {
+    setStartIndex((prev) => prev - 3);
+    setEndIndex((prev) => prev - 3);
+    setActivePageNb((prev) => prev + -1);
+  };
+
+  //handle the clicks on the next button
+  const handleRightClick = () => {
+    setStartIndex((prev) => prev + 3);
+    setEndIndex((prev) => prev + 3);
+    setActivePageNb((prev) => prev + 1);
+  };
+
+  //component that renders the card area
   const RenderNews = () => {
     return (
       <div className="cardWrapper">
-        {news.slice(0, displayedNb).map((news) => (
+        {startIndex !== 0 && (
+          <ButtonGeneral
+            onClick={handleLeftClick}
+            // value="V"
+            className="button btnRound btnYellow btnAbsoluteLeft"
+            iconName="chevronLeft"
+          />
+        )}
+        {/* {news.slice(0, displayIndex).map((news) => ( */}
+        {news.slice(startIndex, endIndex).map((news) => (
           <NewsCard key={news.id} data={news} />
         ))}
+        {endIndex !== news.length && endIndex !== undefined && (
+          <ButtonGeneral
+            onClick={handleRightClick}
+            // value="H"
+            className="button btnRound btnYellow btnAbsoluteRight"
+            iconName="chevronRight"
+          />
+        )}
       </div>
     );
+  };
+
+  //component that renders the page dots
+  const RenderDots = () => {
+    const dots = [];
+    for (let i = 0; i < pages; i++) {
+      dots.push(
+        <FaCircle
+          className={i === activePageNb - 1 ? "fa-circle active" : "fa-circle"}
+          key={i}
+        />
+      );
+    }
+    return <div className="dotWrapper">{dots}</div>;
   };
 
   return (
@@ -26,12 +92,10 @@ const NewsSection = ({ displayedNb, heading, background }) => {
       <div className="contentWrapper">
         <div className="headingWrapper">
           <div>
-            {displayedNb !== undefined && (
-              <p className="sectionHeadingSmall">Article & News</p>
-            )}
+            {!showAll && <p className="sectionHeadingSmall">Article & News</p>}
             <h2 className="sectionHeadingBig">{heading}</h2>
           </div>
-          {displayedNb !== undefined && (
+          {!showAll && (
             <ButtonLink
               value="Browse Articles"
               to="/news"
@@ -41,22 +105,7 @@ const NewsSection = ({ displayedNb, heading, background }) => {
           )}
         </div>
         <RenderNews />
-        {displayedNb !== undefined && (
-          <div className="dotWrapper">
-            <FaCircle className="fa-circle" />
-            <FaCircle className="fa-circle active" />
-            <FaCircle className="fa-circle" />
-            <FaCircle className="fa-circle" />
-            <FaCircle className="fa-circle" />
-          </div>
-        )}
-        {displayedNb !== undefined && (
-          <ButtonGeneral
-            value="Show more"
-            className="btnBlack showMoreBtn"
-            iconName=""
-          />
-        )}
+        {!showAll && <RenderDots />}
       </div>
     </section>
   );

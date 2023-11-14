@@ -1,6 +1,5 @@
 import TeamCard from "./TeamCard/TeamCard";
 import ButtonLink from "@shared/Buttons/ButtonLink";
-import ButtonGeneral from "@shared/Buttons/ButtonGeneral";
 import teamMember1 from "@images/img_team1.jpg";
 import teamMember2 from "@images/img_team2.jpg";
 import teamMember3 from "@images/img_team3.jpg";
@@ -64,7 +63,6 @@ const TeamSection = () => {
           <FaCircle className="fa-circle" />
           <FaCircle className="fa-circle" />
         </div>
-        <ButtonGeneral value="Show more" className="showMoreBtn" iconName="" />
       </div>
     </section>
   );

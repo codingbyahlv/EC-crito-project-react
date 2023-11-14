@@ -63,16 +63,44 @@
 .loginBtn {
   padding: 10px 24px;
 }
-.showMoreBtn {
-  font-weight: 500;
-  font-family: $font1;
-  align-self: center;
-  padding: 8px 12px;
-  margin-top: 48px;
-  @media screen and (min-width: $smallDevice) {
-    display: none;
-  }
-}
 .alignSelfCenter {
   align-self: center;
+}
+.btnAbsoluteLeft {
+  display: none;
+  @media screen and (min-width: $mediumDevice) {
+    display: inline;
+    position: absolute;
+    left: -20px;
+    top: 45%;
+  }
+  @media screen and (min-width: $largeDevice) {
+    left: -40px;
+    top: 45%;
+  }
+  @media screen and (min-width: $xLargeDevice) {
+    left: -55px;
+  }
+  @media screen and (min-width: $xxLargeDevice) {
+    left: -70px;
+  }
+}
+.btnAbsoluteRight {
+  display: none;
+  @media screen and (min-width: $mediumDevice) {
+    display: inline;
+    position: absolute;
+    right: -20px;
+    top: 45%;
+  }
+  @media screen and (min-width: $largeDevice) {
+    right: -40px;
+    top: 45%;
+  }
+  @media screen and (min-width: $xLargeDevice) {
+    right: -55px;
+  }
+  @media screen and (min-width: $xxLargeDevice) {
+    right: -70px;
+  }
 }

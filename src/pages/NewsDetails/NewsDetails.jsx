@@ -136,7 +136,7 @@ const NewsDetails = () => {
       )}
       <NewsSection
         displayedNb={3}
-        heading="Get Every Single Articles & s"
+        heading="Get Every Single Articles & News"
         background={true}
       />
     </main>

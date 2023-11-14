@@ -38,6 +38,7 @@
       flex-direction: column;
       gap: 64px;
       margin-top: 32px;
+      position: relative;
       @media screen and (min-width: $mediumDevice) {
         flex-direction: row;
         flex-wrap: wrap;

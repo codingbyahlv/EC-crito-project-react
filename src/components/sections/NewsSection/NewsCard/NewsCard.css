@@ -8,7 +8,7 @@
 }
 @media screen and (min-width: 768px) {
   .newsCard {
-    flex: 0 1 47%;
+    flex: 0 1 46%;
   }
 }
 @media screen and (min-width: 992px) {
