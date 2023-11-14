@@ -12,11 +12,11 @@ import "./NewsDetails.scss";
 
 const NewsDetails = () => {
   const { news } = useNewsContext();
+  const { id } = useParams();
   const navigate = useNavigate();
   const [newsDetails, setNewsDetails] = useState();
   const [formattedDate, setFormattedDate] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const { id } = useParams();
 
   useEffect(() => {
     getNews();
