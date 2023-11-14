@@ -12,10 +12,12 @@ import HamburgerMenu from "react-hamburger-menu";
 const HeaderSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  //function: open/close the mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  //UI-component: the mobile menu
   const MobileMenu = () => {
     return (
       <div className="mobileMenu">

@@ -4,19 +4,6 @@ import SocialMedia from "@shared/SocialMedia/SocialMedia";
 import "@styles/main.scss";
 import "./FooterSection.scss";
 
-const InfoGroup = ({ group }) => {
-  return (
-    <article className="linkGroup">
-      <h4 className="heading">{group.heading}</h4>
-      {group.links.map((link, index) => (
-        <Link key={index} to={link.url} className="link">
-          {link.name}
-        </Link>
-      ))}
-    </article>
-  );
-};
-
 const FooterSection = () => {
   const data = [
     {
@@ -56,6 +43,20 @@ const FooterSection = () => {
       ],
     },
   ];
+
+  //UI-component: renders the groups of information
+  const InfoGroup = ({ group }) => {
+    return (
+      <article className="linkGroup">
+        <h4 className="heading">{group.heading}</h4>
+        {group.links.map((link, index) => (
+          <Link key={index} to={link.url} className="link">
+            {link.name}
+          </Link>
+        ))}
+      </article>
+    );
+  };
 
   return (
     <footer className="footerSection">

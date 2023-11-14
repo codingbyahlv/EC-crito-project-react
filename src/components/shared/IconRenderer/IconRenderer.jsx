@@ -1,4 +1,5 @@
 import React from "react";
+import { BsBullseye } from "react-icons/bs";
 import {
   FaHandshake,
   FaRegLightbulb,
@@ -10,7 +11,6 @@ import {
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa6";
 import { FiPhoneCall, FiMapPin, FiMail } from "react-icons/fi";
 import { GoArrowUpRight, GoArrowRight } from "react-icons/go";
-import { BsBullseye } from "react-icons/bs";
 import { PiPenNib } from "react-icons/pi";
 
 const IconRenderer = ({ iconName, className }) => {

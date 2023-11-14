@@ -4,6 +4,7 @@ import "./WhyUsCard.scss";
 
 const WhyUsCard = ({ data }) => {
   const { icon, heading, text } = data;
+
   return (
     <article className="whyUsCard">
       <div className="whyUsIcon">

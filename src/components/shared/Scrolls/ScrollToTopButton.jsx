@@ -8,26 +8,24 @@ const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Function to handle scroll event
+    //function: made the scroll button visible when scrolled down below the vh
     const handleScroll = () => {
       const scrolled = document.documentElement.scrollTop;
-      // Show the button when scrolling down, hide when at the top
       setIsVisible(scrolled > 100);
     };
 
-    // Attach the scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  //function: handles the scroll
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Add smooth scrolling behavior
+      behavior: "smooth",
     });
   };
 

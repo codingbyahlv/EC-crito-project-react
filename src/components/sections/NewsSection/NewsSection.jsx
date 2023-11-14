@@ -1,3 +1,4 @@
+//TODO: Lägg in för paginering på News-sidan??
 import { useEffect, useState } from "react";
 import { useNewsContext } from "../../../hooks/useNews";
 import ButtonLink from "@shared/Buttons/ButtonLink";
@@ -14,55 +15,46 @@ const NewsSection = ({ displayedNb, heading, background }) => {
   const [endIndex, setEndIndex] = useState();
   const [activePageNb, setActivePageNb] = useState(0);
   const pages = news.length / displayedNb;
-  // const [displayIndex, setDisplayIndex] = useState();
-
-  // useEffect(() => {
-  //   setDisplayIndex(displayedNb);
-  // }, [displayedNb]);
 
   useEffect(() => {
     setStartIndex(0);
     setEndIndex(displayedNb);
     setActivePageNb(1);
-
     if (displayedNb === undefined) setShowAll(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [displayedNb]);
 
-  //handle the clicks on the prev button
+  //function: handle the clicks on the prev button
   const handleLeftClick = () => {
     setStartIndex((prev) => prev - 3);
     setEndIndex((prev) => prev - 3);
     setActivePageNb((prev) => prev + -1);
   };
 
-  //handle the clicks on the next button
+  //function: handle the clicks on the next button
   const handleRightClick = () => {
     setStartIndex((prev) => prev + 3);
     setEndIndex((prev) => prev + 3);
     setActivePageNb((prev) => prev + 1);
   };
 
-  //component that renders the card area
+  //UI-component: renders the card area
   const RenderNews = () => {
     return (
       <div className="cardWrapper">
         {startIndex !== 0 && (
           <ButtonGeneral
             onClick={handleLeftClick}
-            // value="V"
             className="button btnRound btnYellow btnAbsoluteLeft"
             iconName="chevronLeft"
           />
         )}
-        {/* {news.slice(0, displayIndex).map((news) => ( */}
         {news.slice(startIndex, endIndex).map((news) => (
           <NewsCard key={news.id} data={news} />
         ))}
         {endIndex !== news.length && endIndex !== undefined && (
           <ButtonGeneral
             onClick={handleRightClick}
-            // value="H"
             className="button btnRound btnYellow btnAbsoluteRight"
             iconName="chevronRight"
           />
@@ -71,7 +63,7 @@ const NewsSection = ({ displayedNb, heading, background }) => {
     );
   };
 
-  //component that renders the page dots
+  //UI-component: renders the page dots
   const RenderDots = () => {
     const dots = [];
     for (let i = 0; i < pages; i++) {
@@ -112,4 +104,3 @@ const NewsSection = ({ displayedNb, heading, background }) => {
 };
 
 export default NewsSection;
-//TODO: Lägg in för paginering på News-sidan

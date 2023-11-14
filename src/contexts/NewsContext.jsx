@@ -10,6 +10,7 @@ export const NewsContextProvider = ({ children }) => {
     getNews();
   }, []);
 
+  //function: gets the news
   const getNews = async () => {
     try {
       const respData = await NewsAPI_getAllNews();

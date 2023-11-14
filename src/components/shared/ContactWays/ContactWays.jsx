@@ -35,6 +35,7 @@ const ContactWays = ({ page }) => {
     },
   ];
 
+  //UI-component: render the UI when the component is displayed om the header
   const DisplayInHeader = () => {
     return (
       <div className="contactWaysHeader">
@@ -48,6 +49,7 @@ const ContactWays = ({ page }) => {
     );
   };
 
+  //UI-component: render the UI when the component is displayed om the contact page
   const DisplayInContactPage = () => {
     return (
       <div className="contactWaysPage">

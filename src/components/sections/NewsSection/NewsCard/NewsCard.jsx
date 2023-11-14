@@ -12,6 +12,7 @@ const NewsCard = ({ data }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  //function: formatting the date to format 00 Xxx 0000
   const formatDate = () => {
     const options = { day: "numeric", month: "short" };
     const formattedDate = new Date(data.published).toLocaleDateString(

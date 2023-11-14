@@ -11,7 +11,6 @@ import {
 import "@styles/main.scss";
 import "./FormSection.scss";
 import Modal from "react-modal";
-
 import { MdOutlineClose } from "react-icons/md";
 
 const FormSection = () => {
@@ -48,7 +47,7 @@ const FormSection = () => {
     }
   };
 
-  //handle which validation the field should have
+  //function: handle which validation the field should have
   const validateField = (id, value) => {
     let fieldValidation = false;
     switch (id) {
@@ -74,12 +73,12 @@ const FormSection = () => {
     }
   };
 
-  //update the data object
+  //function: update the data object
   const updateField = (id, value) => {
     setFormData({ ...formData, [id]: value });
   };
 
-  //handle all field changes
+  //function: handle all field changes
   const handleFieldChange = (id, value) => {
     updateField(id, value);
     if (validateField(id, value)) {
@@ -89,7 +88,7 @@ const FormSection = () => {
     }
   };
 
-  //validate the form based on no empty fields
+  //function: validate the form based on no empty fields
   const validateForm = () => {
     const values = Object.values(formData);
     const noEmptyValue = values.every((value) => value !== "");
@@ -100,7 +99,7 @@ const FormSection = () => {
     }
   };
 
-  //reset form
+  //function: reset form
   const resetForm = () => {
     const clearedForm = { ...formData };
     for (const key in clearedForm) {
@@ -109,7 +108,7 @@ const FormSection = () => {
     setFormData(clearedForm);
   };
 
-  //post data
+  //function: post data
   const postData = async () => {
     try {
       const resp = await NewsAPI_postForm(formData);
@@ -123,7 +122,7 @@ const FormSection = () => {
     }
   };
 
-  //handle the submit
+  //function: handle the submit
   const submitForm = (e) => {
     e.preventDefault();
     if (postData()) {
@@ -133,7 +132,7 @@ const FormSection = () => {
     }
   };
 
-  //open the confirmation modal
+  //function: open the confirmation modal
   const openModal = () => {
     setIsOpen(true);
     setTimeout(() => {
