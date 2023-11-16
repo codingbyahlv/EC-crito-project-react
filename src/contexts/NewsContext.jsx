@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { getAllNews as NewsAPI_getAllNews } from "@services/NewsAPI";
 
-export const NewsContext = createContext();
+export const NewsContext = createContext(null);
 
 export const NewsContextProvider = ({ children }) => {
   const [news, setNews] = useState([]);
