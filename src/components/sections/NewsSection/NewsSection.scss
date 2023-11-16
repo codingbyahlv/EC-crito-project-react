@@ -49,7 +49,7 @@
 
     .dotWrapper {
       display: none;
-      @media screen and (min-width: $smallDevice) {
+      @media screen and (min-width: $mediumDevice) {
         display: flex;
         justify-content: center;
         gap: 16px;

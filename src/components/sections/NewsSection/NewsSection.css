@@ -56,7 +56,7 @@
 .newsSection .contentWrapper .dotWrapper {
   display: none;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   .newsSection .contentWrapper .dotWrapper {
     display: flex;
     justify-content: center;
